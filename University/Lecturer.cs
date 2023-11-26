@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
+using System.Data;
+
 
 namespace University
 {
     public partial class Lecturer : Form
     {
-        //Person p = new Person();
+        Person p = new Person();
         public Lecturer()
         {
             InitializeComponent();
@@ -30,18 +33,21 @@ namespace University
         {
             string fn = txtFn.Text;
             string sn = txtSn.Text;
-            string dob = dtpAge.Text;
+            string eirCode = txtEirCode.Text;
             string cy = cboCounty.SelectedItem.ToString();
+            string age = dtpAge.Text;
             string ge = "Male";
             if (rdoFemale.Checked)
             {
                 ge = "Female";
             }
+            string ph = txtPhone.Text;
+            string ema = txtEmail.Text;
             string dept = cboDpt.SelectedItem.ToString();
-            //float pay = float.Parse(txtSal.Text);
+            float pay = float.Parse(txtSal.Text);
 
             //p.Add(fn, sn, dob, cy, ge, dept, pay);
-            //MessageBox.Show("Data Added", "Add Patient", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Data Added", "New Lecture Added to DataBase", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ////message box has four parameters
             ////1 message
             ////2 title
