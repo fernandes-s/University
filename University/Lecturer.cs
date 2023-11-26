@@ -16,7 +16,7 @@ namespace University
 {
     public partial class Lecturer : Form
     {
-        Person p = new Person();
+        AddPeople ap = new AddPeople();
         public Lecturer()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace University
         {
             string fn = txtFn.Text;
             string sn = txtSn.Text;
-            string eirCode = txtEirCode.Text;
+            string eirC = txtEirCode.Text;
             string cy = cboCounty.SelectedItem.ToString();
             string age = dtpAge.Text;
             string ge = "Male";
@@ -46,7 +46,8 @@ namespace University
             string dept = cboDpt.SelectedItem.ToString();
             float pay = float.Parse(txtSal.Text);
 
-            //p.Add(fn, sn, dob, cy, ge, dept, pay);
+            ap.AddNewLecturer(fn, sn, eirC, cy, age, ge, ph, ema, dept, pay);
+                //p.Add(fn, sn, dob, cy, ge, dept, pay);
             MessageBox.Show("Data Added", "New Lecture Added to DataBase", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ////message box has four parameters
             ////1 message
@@ -60,7 +61,7 @@ namespace University
 
 
 
-            string eirCode = txtEirCode.Text;
+            //string eirCode = txtEirCode.Text;
             string regEirCode = @"^[A-Za-z]\d{1,2}[A-Za-z0-9]{4}$";
 
             string phone = txtPhone.Text;
@@ -78,7 +79,7 @@ namespace University
                 MessageBox.Show("Incorrect phone number, try again.");
             }
 
-            if (Regex.IsMatch(eirCode, regEirCode)) 
+            if (Regex.IsMatch(eirC, regEirCode)) 
             {
 
             }
