@@ -29,6 +29,20 @@
         private void InitializeComponent()
         {
             this.gboLecturer = new System.Windows.Forms.GroupBox();
+            this.lblAgeShow = new System.Windows.Forms.Label();
+            this.txtSal = new System.Windows.Forms.TextBox();
+            this.lblMod = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
+            this.rdoFemale = new System.Windows.Forms.RadioButton();
+            this.rdoMale = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblRegEmail = new System.Windows.Forms.Label();
+            this.txtSn = new System.Windows.Forms.TextBox();
+            this.dtpAge = new System.Windows.Forms.DateTimePicker();
+            this.lblRegPhone = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.cboDpt = new System.Windows.Forms.ComboBox();
+            this.lblCourse = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -42,28 +56,14 @@
             this.txtFn = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.cboDpt = new System.Windows.Forms.ComboBox();
-            this.lblDpt = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblRegPhone = new System.Windows.Forms.Label();
-            this.dtpAge = new System.Windows.Forms.DateTimePicker();
-            this.txtSn = new System.Windows.Forms.TextBox();
-            this.lblRegEmail = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rdoMale = new System.Windows.Forms.RadioButton();
-            this.rdoFemale = new System.Windows.Forms.RadioButton();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.lblAgeShow = new System.Windows.Forms.Label();
-            this.lblSal = new System.Windows.Forms.Label();
-            this.txtSal = new System.Windows.Forms.TextBox();
             this.gboLecturer.SuspendLayout();
             this.SuspendLayout();
             // 
             // gboLecturer
             // 
-            this.gboLecturer.Controls.Add(this.txtSal);
-            this.gboLecturer.Controls.Add(this.lblSal);
             this.gboLecturer.Controls.Add(this.lblAgeShow);
+            this.gboLecturer.Controls.Add(this.txtSal);
+            this.gboLecturer.Controls.Add(this.lblMod);
             this.gboLecturer.Controls.Add(this.lblGender);
             this.gboLecturer.Controls.Add(this.rdoFemale);
             this.gboLecturer.Controls.Add(this.rdoMale);
@@ -74,7 +74,7 @@
             this.gboLecturer.Controls.Add(this.lblRegPhone);
             this.gboLecturer.Controls.Add(this.txtEmail);
             this.gboLecturer.Controls.Add(this.cboDpt);
-            this.gboLecturer.Controls.Add(this.lblDpt);
+            this.gboLecturer.Controls.Add(this.lblCourse);
             this.gboLecturer.Controls.Add(this.btnClose);
             this.gboLecturer.Controls.Add(this.btnAdd);
             this.gboLecturer.Controls.Add(this.txtPhone);
@@ -92,10 +92,137 @@
             this.gboLecturer.ForeColor = System.Drawing.SystemColors.Highlight;
             this.gboLecturer.Location = new System.Drawing.Point(13, 13);
             this.gboLecturer.Name = "gboLecturer";
-            this.gboLecturer.Size = new System.Drawing.Size(686, 556);
+            this.gboLecturer.Size = new System.Drawing.Size(686, 635);
             this.gboLecturer.TabIndex = 0;
             this.gboLecturer.TabStop = false;
             this.gboLecturer.Text = "Lecturer";
+            // 
+            // lblAgeShow
+            // 
+            this.lblAgeShow.AutoSize = true;
+            this.lblAgeShow.Location = new System.Drawing.Point(407, 221);
+            this.lblAgeShow.Name = "lblAgeShow";
+            this.lblAgeShow.Size = new System.Drawing.Size(0, 29);
+            this.lblAgeShow.TabIndex = 32;
+            // 
+            // txtSal
+            // 
+            this.txtSal.Location = new System.Drawing.Point(163, 465);
+            this.txtSal.Name = "txtSal";
+            this.txtSal.Size = new System.Drawing.Size(295, 36);
+            this.txtSal.TabIndex = 31;
+            // 
+            // lblMod
+            // 
+            this.lblMod.AutoSize = true;
+            this.lblMod.Location = new System.Drawing.Point(6, 472);
+            this.lblMod.Name = "lblMod";
+            this.lblMod.Size = new System.Drawing.Size(96, 29);
+            this.lblMod.TabIndex = 30;
+            this.lblMod.Text = "Module";
+            // 
+            // lblGender
+            // 
+            this.lblGender.AutoSize = true;
+            this.lblGender.Location = new System.Drawing.Point(6, 266);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(96, 29);
+            this.lblGender.TabIndex = 28;
+            this.lblGender.Text = "Gender";
+            // 
+            // rdoFemale
+            // 
+            this.rdoFemale.AutoSize = true;
+            this.rdoFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoFemale.Location = new System.Drawing.Point(319, 268);
+            this.rdoFemale.Name = "rdoFemale";
+            this.rdoFemale.Size = new System.Drawing.Size(98, 29);
+            this.rdoFemale.TabIndex = 27;
+            this.rdoFemale.Text = "Female";
+            this.rdoFemale.UseVisualStyleBackColor = true;
+            // 
+            // rdoMale
+            // 
+            this.rdoMale.AutoSize = true;
+            this.rdoMale.Checked = true;
+            this.rdoMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoMale.Location = new System.Drawing.Point(163, 268);
+            this.rdoMale.Name = "rdoMale";
+            this.rdoMale.Size = new System.Drawing.Size(76, 29);
+            this.rdoMale.TabIndex = 26;
+            this.rdoMale.TabStop = true;
+            this.rdoMale.Text = "Male";
+            this.rdoMale.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(160, 154);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 13);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "E.G: D12F3G5 | or | D123456";
+            // 
+            // lblRegEmail
+            // 
+            this.lblRegEmail.AutoSize = true;
+            this.lblRegEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegEmail.Location = new System.Drawing.Point(160, 405);
+            this.lblRegEmail.Name = "lblRegEmail";
+            this.lblRegEmail.Size = new System.Drawing.Size(108, 13);
+            this.lblRegEmail.TabIndex = 24;
+            this.lblRegEmail.Text = "E.G: abc@myudf.com";
+            // 
+            // txtSn
+            // 
+            this.txtSn.Location = new System.Drawing.Point(163, 73);
+            this.txtSn.Name = "txtSn";
+            this.txtSn.Size = new System.Drawing.Size(295, 36);
+            this.txtSn.TabIndex = 22;
+            // 
+            // dtpAge
+            // 
+            this.dtpAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpAge.Location = new System.Drawing.Point(163, 224);
+            this.dtpAge.Name = "dtpAge";
+            this.dtpAge.Size = new System.Drawing.Size(200, 26);
+            this.dtpAge.TabIndex = 5;
+            this.dtpAge.ValueChanged += new System.EventHandler(this.dtpAge_ValueChanged);
+            // 
+            // lblRegPhone
+            // 
+            this.lblRegPhone.AutoSize = true;
+            this.lblRegPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegPhone.Location = new System.Drawing.Point(160, 347);
+            this.lblRegPhone.Name = "lblRegPhone";
+            this.lblRegPhone.Size = new System.Drawing.Size(94, 13);
+            this.lblRegPhone.TabIndex = 21;
+            this.lblRegPhone.Text = "E.G: 123-1234567";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(163, 366);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(295, 36);
+            this.txtEmail.TabIndex = 8;
+            // 
+            // cboDpt
+            // 
+            this.cboDpt.FormattingEnabled = true;
+            this.cboDpt.Location = new System.Drawing.Point(163, 425);
+            this.cboDpt.Name = "cboDpt";
+            this.cboDpt.Size = new System.Drawing.Size(295, 37);
+            this.cboDpt.TabIndex = 9;
+            // 
+            // lblCourse
+            // 
+            this.lblCourse.AutoSize = true;
+            this.lblCourse.Location = new System.Drawing.Point(6, 429);
+            this.lblCourse.Name = "lblCourse";
+            this.lblCourse.Size = new System.Drawing.Size(94, 29);
+            this.lblCourse.TabIndex = 18;
+            this.lblCourse.Text = "Course";
             // 
             // btnClose
             // 
@@ -219,138 +346,11 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             // 
-            // cboDpt
-            // 
-            this.cboDpt.FormattingEnabled = true;
-            this.cboDpt.Location = new System.Drawing.Point(163, 425);
-            this.cboDpt.Name = "cboDpt";
-            this.cboDpt.Size = new System.Drawing.Size(295, 37);
-            this.cboDpt.TabIndex = 9;
-            // 
-            // lblDpt
-            // 
-            this.lblDpt.AutoSize = true;
-            this.lblDpt.Location = new System.Drawing.Point(6, 429);
-            this.lblDpt.Name = "lblDpt";
-            this.lblDpt.Size = new System.Drawing.Size(145, 29);
-            this.lblDpt.TabIndex = 18;
-            this.lblDpt.Text = "Department";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(163, 366);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(295, 36);
-            this.txtEmail.TabIndex = 8;
-            // 
-            // lblRegPhone
-            // 
-            this.lblRegPhone.AutoSize = true;
-            this.lblRegPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegPhone.Location = new System.Drawing.Point(160, 347);
-            this.lblRegPhone.Name = "lblRegPhone";
-            this.lblRegPhone.Size = new System.Drawing.Size(94, 13);
-            this.lblRegPhone.TabIndex = 21;
-            this.lblRegPhone.Text = "E.G: 123-1234567";
-            // 
-            // dtpAge
-            // 
-            this.dtpAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpAge.Location = new System.Drawing.Point(163, 224);
-            this.dtpAge.Name = "dtpAge";
-            this.dtpAge.Size = new System.Drawing.Size(200, 26);
-            this.dtpAge.TabIndex = 5;
-            this.dtpAge.ValueChanged += new System.EventHandler(this.dtpAge_ValueChanged);
-            // 
-            // txtSn
-            // 
-            this.txtSn.Location = new System.Drawing.Point(163, 73);
-            this.txtSn.Name = "txtSn";
-            this.txtSn.Size = new System.Drawing.Size(295, 36);
-            this.txtSn.TabIndex = 22;
-            // 
-            // lblRegEmail
-            // 
-            this.lblRegEmail.AutoSize = true;
-            this.lblRegEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegEmail.Location = new System.Drawing.Point(160, 405);
-            this.lblRegEmail.Name = "lblRegEmail";
-            this.lblRegEmail.Size = new System.Drawing.Size(108, 13);
-            this.lblRegEmail.TabIndex = 24;
-            this.lblRegEmail.Text = "E.G: abc@myudf.com";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(160, 154);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 13);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "E.G: D12F3G5 | or | D123456";
-            // 
-            // rdoMale
-            // 
-            this.rdoMale.AutoSize = true;
-            this.rdoMale.Checked = true;
-            this.rdoMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoMale.Location = new System.Drawing.Point(163, 268);
-            this.rdoMale.Name = "rdoMale";
-            this.rdoMale.Size = new System.Drawing.Size(76, 29);
-            this.rdoMale.TabIndex = 26;
-            this.rdoMale.TabStop = true;
-            this.rdoMale.Text = "Male";
-            this.rdoMale.UseVisualStyleBackColor = true;
-            // 
-            // rdoFemale
-            // 
-            this.rdoFemale.AutoSize = true;
-            this.rdoFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoFemale.Location = new System.Drawing.Point(319, 268);
-            this.rdoFemale.Name = "rdoFemale";
-            this.rdoFemale.Size = new System.Drawing.Size(98, 29);
-            this.rdoFemale.TabIndex = 27;
-            this.rdoFemale.Text = "Female";
-            this.rdoFemale.UseVisualStyleBackColor = true;
-            // 
-            // lblGender
-            // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(6, 266);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(96, 29);
-            this.lblGender.TabIndex = 28;
-            this.lblGender.Text = "Gender";
-            // 
-            // lblAgeShow
-            // 
-            this.lblAgeShow.AutoSize = true;
-            this.lblAgeShow.Location = new System.Drawing.Point(400, 221);
-            this.lblAgeShow.Name = "lblAgeShow";
-            this.lblAgeShow.Size = new System.Drawing.Size(0, 29);
-            this.lblAgeShow.TabIndex = 29;
-            // 
-            // lblSal
-            // 
-            this.lblSal.AutoSize = true;
-            this.lblSal.Location = new System.Drawing.Point(6, 472);
-            this.lblSal.Name = "lblSal";
-            this.lblSal.Size = new System.Drawing.Size(85, 29);
-            this.lblSal.TabIndex = 30;
-            this.lblSal.Text = "Salary";
-            // 
-            // txtSal
-            // 
-            this.txtSal.Location = new System.Drawing.Point(163, 465);
-            this.txtSal.Name = "txtSal";
-            this.txtSal.Size = new System.Drawing.Size(295, 36);
-            this.txtSal.TabIndex = 31;
-            // 
             // Lecturer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 562);
+            this.ClientSize = new System.Drawing.Size(1100, 718);
             this.Controls.Add(this.gboLecturer);
             this.Name = "Lecturer";
             this.Text = "Lecturer";
@@ -378,7 +378,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cboDpt;
-        private System.Windows.Forms.Label lblDpt;
+        private System.Windows.Forms.Label lblCourse;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblRegPhone;
         private System.Windows.Forms.DateTimePicker dtpAge;
@@ -388,8 +388,8 @@
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.RadioButton rdoFemale;
         private System.Windows.Forms.RadioButton rdoMale;
-        private System.Windows.Forms.Label lblAgeShow;
         private System.Windows.Forms.TextBox txtSal;
-        private System.Windows.Forms.Label lblSal;
+        private System.Windows.Forms.Label lblMod;
+        private System.Windows.Forms.Label lblAgeShow;
     }
 }

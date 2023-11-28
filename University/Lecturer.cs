@@ -16,6 +16,7 @@ namespace University
 {
     public partial class Lecturer : Form
     {
+
         AddPeople ap = new AddPeople();
         public Lecturer()
         {
@@ -35,7 +36,7 @@ namespace University
             string sn = txtSn.Text;
             string eirC = txtEirCode.Text;
             string cy = cboCounty.SelectedItem.ToString();
-            string age = dtpAge.Text;
+            string age = lblAgeShow.Text;
             string ge = "Male";
             if (rdoFemale.Checked)
             {
@@ -47,7 +48,6 @@ namespace University
             float pay = float.Parse(txtSal.Text);
 
             ap.AddNewLecturer(fn, sn, eirC, cy, age, ge, ph, ema, dept, pay);
-                //p.Add(fn, sn, dob, cy, ge, dept, pay);
             MessageBox.Show("Data Added", "New Lecture Added to DataBase", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ////message box has four parameters
             ////1 message
@@ -56,21 +56,21 @@ namespace University
             //4 icon
             txtFn.Clear();
             txtSn.Clear();
+            txtEirCode.Clear();
+            txtPhone.Clear();
+            txtEmail.Clear();
             txtSal.Clear();
 
 
 
 
-            //string eirCode = txtEirCode.Text;
             string regEirCode = @"^[A-Za-z]\d{1,2}[A-Za-z0-9]{4}$";
 
-            string phone = txtPhone.Text;
             string regPhone = @"^\d{3}-\d{7}$";
 
-            string email = txtEmail.Text;
             string regEmail = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
-
-            if (Regex.IsMatch(phone, regPhone))
+            //regEx phone checker
+            if (Regex.IsMatch(ph, regPhone))
             {
                 //MessageBox.Show("Phone number is valid! :)");
             }
@@ -79,6 +79,7 @@ namespace University
                 MessageBox.Show("Incorrect phone number, try again.");
             }
 
+            //regEx eirCode checker
             if (Regex.IsMatch(eirC, regEirCode)) 
             {
 
@@ -88,7 +89,8 @@ namespace University
                 MessageBox.Show("Incorrect eir code, try again.");
             }
 
-            if (Regex.IsMatch(email, regEmail))
+            //regEx email checker
+            if (Regex.IsMatch(ema, regEmail))
             {
 
             }
@@ -101,12 +103,6 @@ namespace University
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void lblAgeShow_Click(object sender, EventArgs e)
-        {
-            //age just shows if the button is clecked. other way to do it
-            
         }
 
         private void dtpAge_ValueChanged(object sender, EventArgs e)

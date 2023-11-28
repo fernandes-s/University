@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace University
 {
-    enum Module
+    enum ModuleCS
     {
         OOP,
         WebDev,
@@ -14,7 +14,33 @@ namespace University
         MachineLearning,
         Databases
     };
-    
+
+    enum ModuleMa 
+    {
+        SellingandSalesManagement,
+        MarketingResearch,
+        DigitalMarketingConcepts,
+        AdvancedEconomicPerspectives,
+        EventPlanning
+    };
+
+    enum ModuleGe
+    {
+        EvolutionAndTheTreeOfLife,
+        LaboratorySkillsInMicrobiologyI,
+        StatisticsInDataScienceII,
+        MathematicalMolecularBiologyI,
+        GeneticsAndGenomicsII
+    }
+
+    enum ModuleMe
+    {
+        Neurosciences,
+        ClinicalBiochemistry,
+        PrinciplesOfPharmacology,
+        HeadAndNeckAnatomy,
+        InfectionandImmunity
+    }
     enum Department
     {
         ComputerScience,
