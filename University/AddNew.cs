@@ -19,13 +19,13 @@ namespace University
 
         private void btnLecturer_Click(object sender, EventArgs e)
         {
-            Lecturer l = new Lecturer();
+            AddLecturer l = new AddLecturer();
             l.ShowDialog();
         }
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
-            Student s = new Student();
+            AddStudent s = new AddStudent();
             s.ShowDialog();
         }
 

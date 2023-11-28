@@ -83,7 +83,14 @@ namespace University
         Westmeath,
         Wexford,
         Wicklow
-    };
+    }
 
-    
+    enum Gender
+    {
+        Both,
+        Male,
+        Female
+    }
+
+
 }

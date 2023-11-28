@@ -76,12 +76,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lecturer.cs">
+    <Compile Include="AddLecturer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Lecturer.Designer.cs">
-      <DependentUpon>Lecturer.cs</DependentUpon>
+    <Compile Include="AddLecturer.Designer.cs">
+      <DependentUpon>AddLecturer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lecturer.cs" />
     <Compile Include="MyTables.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
@@ -92,20 +93,21 @@
     <Compile Include="ShowData.Designer.cs">
       <DependentUpon>ShowData.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student.cs">
+    <Compile Include="AddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Student.Designer.cs">
-      <DependentUpon>Student.cs</DependentUpon>
+    <Compile Include="AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student.cs" />
     <EmbeddedResource Include="AddNew.resx">
       <DependentUpon>AddNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lecturer.resx">
-      <DependentUpon>Lecturer.cs</DependentUpon>
+    <EmbeddedResource Include="AddLecturer.resx">
+      <DependentUpon>AddLecturer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,8 +118,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Student.resx">
-      <DependentUpon>Student.cs</DependentUpon>
+    <EmbeddedResource Include="AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowData.resx">
+      <DependentUpon>ShowData.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

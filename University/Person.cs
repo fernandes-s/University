@@ -7,7 +7,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace University
 {
-    internal class Person
+    internal class Person 
     {
 
         public string FirstName { get; set; }   
