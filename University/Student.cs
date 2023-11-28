@@ -21,14 +21,14 @@ namespace University
         private void Student_Load(object sender, EventArgs e)
         {
             cboCounty.DataSource = Enum.GetValues(typeof(Counties));
-            cboCourse.DataSource = Enum.GetValues(typeof(Department));
-            
+            cboCourse.DataSource = Enum.GetValues(typeof(Department));           
 
 
         }
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
+            //Person p = new Person();
             string fn = txtFn.Text;
             string sn = txtSn.Text;
             string eirC = txtEirCode.Text;
@@ -51,6 +51,26 @@ namespace University
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cboModule_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboCourse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (cboCourse.SelectedIndex.Equals(0))
+                cboModule.DataSource = Enum.GetValues(typeof(ModuleCS));
+            if (cboCourse.SelectedIndex.Equals(1))
+                cboModule.DataSource = Enum.GetValues(typeof(ModuleMa));
+            if (cboCourse.SelectedIndex.Equals(2))
+                cboModule.DataSource = Enum.GetValues(typeof(ModuleGe));
+            if (cboCourse.SelectedIndex.Equals(3))
+                cboModule.DataSource = Enum.GetValues(typeof(ModuleMe));
+
+
         }
     }
 }

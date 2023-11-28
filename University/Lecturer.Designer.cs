@@ -31,7 +31,7 @@
             this.gboLecturer = new System.Windows.Forms.GroupBox();
             this.lblAgeShow = new System.Windows.Forms.Label();
             this.txtSal = new System.Windows.Forms.TextBox();
-            this.lblMod = new System.Windows.Forms.Label();
+            this.lblSal = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.rdoFemale = new System.Windows.Forms.RadioButton();
             this.rdoMale = new System.Windows.Forms.RadioButton();
@@ -42,7 +42,7 @@
             this.lblRegPhone = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.cboDpt = new System.Windows.Forms.ComboBox();
-            this.lblCourse = new System.Windows.Forms.Label();
+            this.lblMod = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -63,7 +63,7 @@
             // 
             this.gboLecturer.Controls.Add(this.lblAgeShow);
             this.gboLecturer.Controls.Add(this.txtSal);
-            this.gboLecturer.Controls.Add(this.lblMod);
+            this.gboLecturer.Controls.Add(this.lblSal);
             this.gboLecturer.Controls.Add(this.lblGender);
             this.gboLecturer.Controls.Add(this.rdoFemale);
             this.gboLecturer.Controls.Add(this.rdoMale);
@@ -74,7 +74,7 @@
             this.gboLecturer.Controls.Add(this.lblRegPhone);
             this.gboLecturer.Controls.Add(this.txtEmail);
             this.gboLecturer.Controls.Add(this.cboDpt);
-            this.gboLecturer.Controls.Add(this.lblCourse);
+            this.gboLecturer.Controls.Add(this.lblMod);
             this.gboLecturer.Controls.Add(this.btnClose);
             this.gboLecturer.Controls.Add(this.btnAdd);
             this.gboLecturer.Controls.Add(this.txtPhone);
@@ -112,14 +112,14 @@
             this.txtSal.Size = new System.Drawing.Size(295, 36);
             this.txtSal.TabIndex = 31;
             // 
-            // lblMod
+            // lblSal
             // 
-            this.lblMod.AutoSize = true;
-            this.lblMod.Location = new System.Drawing.Point(6, 472);
-            this.lblMod.Name = "lblMod";
-            this.lblMod.Size = new System.Drawing.Size(96, 29);
-            this.lblMod.TabIndex = 30;
-            this.lblMod.Text = "Module";
+            this.lblSal.AutoSize = true;
+            this.lblSal.Location = new System.Drawing.Point(6, 472);
+            this.lblSal.Name = "lblSal";
+            this.lblSal.Size = new System.Drawing.Size(85, 29);
+            this.lblSal.TabIndex = 30;
+            this.lblSal.Text = "Salary";
             // 
             // lblGender
             // 
@@ -215,14 +215,14 @@
             this.cboDpt.Size = new System.Drawing.Size(295, 37);
             this.cboDpt.TabIndex = 9;
             // 
-            // lblCourse
+            // lblMod
             // 
-            this.lblCourse.AutoSize = true;
-            this.lblCourse.Location = new System.Drawing.Point(6, 429);
-            this.lblCourse.Name = "lblCourse";
-            this.lblCourse.Size = new System.Drawing.Size(94, 29);
-            this.lblCourse.TabIndex = 18;
-            this.lblCourse.Text = "Course";
+            this.lblMod.AutoSize = true;
+            this.lblMod.Location = new System.Drawing.Point(6, 429);
+            this.lblMod.Name = "lblMod";
+            this.lblMod.Size = new System.Drawing.Size(96, 29);
+            this.lblMod.TabIndex = 18;
+            this.lblMod.Text = "Module";
             // 
             // btnClose
             // 
@@ -231,7 +231,7 @@
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Arial", 16F);
-            this.btnClose.Location = new System.Drawing.Point(266, 504);
+            this.btnClose.Location = new System.Drawing.Point(266, 526);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(171, 46);
             this.btnClose.TabIndex = 11;
@@ -246,7 +246,7 @@
             this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Arial", 16F);
-            this.btnAdd.Location = new System.Drawing.Point(11, 504);
+            this.btnAdd.Location = new System.Drawing.Point(11, 526);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(171, 46);
             this.btnAdd.TabIndex = 10;
@@ -378,7 +378,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cboDpt;
-        private System.Windows.Forms.Label lblCourse;
+        private System.Windows.Forms.Label lblMod;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblRegPhone;
         private System.Windows.Forms.DateTimePicker dtpAge;
@@ -389,7 +389,7 @@
         private System.Windows.Forms.RadioButton rdoFemale;
         private System.Windows.Forms.RadioButton rdoMale;
         private System.Windows.Forms.TextBox txtSal;
-        private System.Windows.Forms.Label lblMod;
+        private System.Windows.Forms.Label lblSal;
         private System.Windows.Forms.Label lblAgeShow;
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gboLecturer = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.cboModule = new System.Windows.Forms.ComboBox();
             this.lblAgeShow = new System.Windows.Forms.Label();
             this.lblModule = new System.Windows.Forms.Label();
             this.lblGe = new System.Windows.Forms.Label();
@@ -54,8 +56,6 @@
             this.txtFn = new System.Windows.Forms.TextBox();
             this.lblSn = new System.Windows.Forms.Label();
             this.lblFn = new System.Windows.Forms.Label();
-            this.cboModule = new System.Windows.Forms.ComboBox();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.gboLecturer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,6 +97,30 @@
             this.gboLecturer.TabStop = false;
             this.gboLecturer.Text = "Student";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAdd.FlatAppearance.BorderSize = 3;
+            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Arial", 16F);
+            this.btnAdd.Location = new System.Drawing.Point(25, 535);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(171, 46);
+            this.btnAdd.TabIndex = 34;
+            this.btnAdd.Text = "Add Student";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
+            // 
+            // cboModule
+            // 
+            this.cboModule.FormattingEnabled = true;
+            this.cboModule.Location = new System.Drawing.Point(163, 468);
+            this.cboModule.Name = "cboModule";
+            this.cboModule.Size = new System.Drawing.Size(295, 37);
+            this.cboModule.TabIndex = 33;
+            this.cboModule.SelectedIndexChanged += new System.EventHandler(this.cboModule_SelectedIndexChanged);
+            // 
             // lblAgeShow
             // 
             this.lblAgeShow.AutoSize = true;
@@ -110,9 +134,9 @@
             this.lblModule.AutoSize = true;
             this.lblModule.Location = new System.Drawing.Point(6, 472);
             this.lblModule.Name = "lblModule";
-            this.lblModule.Size = new System.Drawing.Size(30, 29);
+            this.lblModule.Size = new System.Drawing.Size(109, 29);
             this.lblModule.TabIndex = 30;
-            this.lblModule.Text = "S";
+            this.lblModule.Text = "Modules";
             // 
             // lblGe
             // 
@@ -206,6 +230,7 @@
             this.cboCourse.Name = "cboCourse";
             this.cboCourse.Size = new System.Drawing.Size(295, 37);
             this.cboCourse.TabIndex = 9;
+            this.cboCourse.SelectedIndexChanged += new System.EventHandler(this.cboCourse_SelectedIndexChanged);
             // 
             // lblCourse
             // 
@@ -223,7 +248,7 @@
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Arial", 16F);
-            this.btnClose.Location = new System.Drawing.Point(266, 504);
+            this.btnClose.Location = new System.Drawing.Point(267, 535);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(171, 46);
             this.btnClose.TabIndex = 11;
@@ -323,34 +348,11 @@
             this.lblFn.TabIndex = 0;
             this.lblFn.Text = "Name";
             // 
-            // cboModule
-            // 
-            this.cboModule.FormattingEnabled = true;
-            this.cboModule.Location = new System.Drawing.Point(163, 468);
-            this.cboModule.Name = "cboModule";
-            this.cboModule.Size = new System.Drawing.Size(295, 37);
-            this.cboModule.TabIndex = 33;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAdd.FlatAppearance.BorderSize = 3;
-            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Arial", 16F);
-            this.btnAdd.Location = new System.Drawing.Point(25, 511);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(171, 46);
-            this.btnAdd.TabIndex = 34;
-            this.btnAdd.Text = "Add Student";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
-            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 599);
+            this.ClientSize = new System.Drawing.Size(1005, 651);
             this.Controls.Add(this.gboLecturer);
             this.Name = "Student";
             this.Text = "Student";
