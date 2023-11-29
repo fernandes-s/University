@@ -35,10 +35,10 @@ namespace University
             CloseCon();
         }
 
-        public void AddNewStudent(string fn, string sn, string eirC, string cy, string age, string ge, string ph, string ema, string dept, float pay)
+        public void AddNewStudent(string fn, string sn, string eirC, string cy, string age, string ge, string ph, string ema, string cour, string mod)
         {
             SqlCommand cmd = OpenCon().CreateCommand();
-            cmd.CommandText = "uspAddLecturer";
+            cmd.CommandText = "uspAddStudent";
             cmd.CommandType = CommandType.StoredProcedure;
 
 
@@ -50,8 +50,8 @@ namespace University
             cmd.Parameters.AddWithValue("@ge", ge);
             cmd.Parameters.AddWithValue("@ph", ph);
             cmd.Parameters.AddWithValue("@ema", ema);
-            //cmd.Parameters.AddWithValue("@dept", dept);
-            //cmd.Parameters.AddWithValue("@pay", pay);
+            cmd.Parameters.AddWithValue("@cour", cour);
+            cmd.Parameters.AddWithValue("@mod", mod);
 
 
 

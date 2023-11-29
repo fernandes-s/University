@@ -30,7 +30,6 @@
         {
             this.gboLecturer = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.cboModule = new System.Windows.Forms.ComboBox();
             this.lblAgeShow = new System.Windows.Forms.Label();
             this.lblModule = new System.Windows.Forms.Label();
             this.lblGe = new System.Windows.Forms.Label();
@@ -56,13 +55,14 @@
             this.txtFn = new System.Windows.Forms.TextBox();
             this.lblSn = new System.Windows.Forms.Label();
             this.lblFn = new System.Windows.Forms.Label();
+            this.cboModule = new System.Windows.Forms.ComboBox();
             this.gboLecturer.SuspendLayout();
             this.SuspendLayout();
             // 
             // gboLecturer
             // 
-            this.gboLecturer.Controls.Add(this.btnAdd);
             this.gboLecturer.Controls.Add(this.cboModule);
+            this.gboLecturer.Controls.Add(this.btnAdd);
             this.gboLecturer.Controls.Add(this.lblAgeShow);
             this.gboLecturer.Controls.Add(this.lblModule);
             this.gboLecturer.Controls.Add(this.lblGe);
@@ -107,19 +107,10 @@
             this.btnAdd.Location = new System.Drawing.Point(25, 535);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(171, 46);
-            this.btnAdd.TabIndex = 34;
+            this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Add Student";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
-            // 
-            // cboModule
-            // 
-            this.cboModule.FormattingEnabled = true;
-            this.cboModule.Location = new System.Drawing.Point(163, 468);
-            this.cboModule.Name = "cboModule";
-            this.cboModule.Size = new System.Drawing.Size(295, 37);
-            this.cboModule.TabIndex = 33;
-            this.cboModule.SelectedIndexChanged += new System.EventHandler(this.cboModule_SelectedIndexChanged);
             // 
             // lblAgeShow
             // 
@@ -154,7 +145,7 @@
             this.rdoFemale.Location = new System.Drawing.Point(319, 268);
             this.rdoFemale.Name = "rdoFemale";
             this.rdoFemale.Size = new System.Drawing.Size(98, 29);
-            this.rdoFemale.TabIndex = 27;
+            this.rdoFemale.TabIndex = 7;
             this.rdoFemale.Text = "Female";
             this.rdoFemale.UseVisualStyleBackColor = true;
             // 
@@ -166,7 +157,7 @@
             this.rdoMale.Location = new System.Drawing.Point(163, 268);
             this.rdoMale.Name = "rdoMale";
             this.rdoMale.Size = new System.Drawing.Size(76, 29);
-            this.rdoMale.TabIndex = 26;
+            this.rdoMale.TabIndex = 6;
             this.rdoMale.TabStop = true;
             this.rdoMale.Text = "Male";
             this.rdoMale.UseVisualStyleBackColor = true;
@@ -196,7 +187,7 @@
             this.txtSn.Location = new System.Drawing.Point(163, 73);
             this.txtSn.Name = "txtSn";
             this.txtSn.Size = new System.Drawing.Size(295, 36);
-            this.txtSn.TabIndex = 22;
+            this.txtSn.TabIndex = 2;
             // 
             // dtpAge
             // 
@@ -205,6 +196,7 @@
             this.dtpAge.Name = "dtpAge";
             this.dtpAge.Size = new System.Drawing.Size(200, 26);
             this.dtpAge.TabIndex = 5;
+            this.dtpAge.ValueChanged += new System.EventHandler(this.dtpAge_ValueChanged);
             // 
             // lblRegPhone
             // 
@@ -221,7 +213,7 @@
             this.txtEmail.Location = new System.Drawing.Point(163, 366);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(295, 36);
-            this.txtEmail.TabIndex = 8;
+            this.txtEmail.TabIndex = 9;
             // 
             // cboCourse
             // 
@@ -229,7 +221,7 @@
             this.cboCourse.Location = new System.Drawing.Point(163, 425);
             this.cboCourse.Name = "cboCourse";
             this.cboCourse.Size = new System.Drawing.Size(295, 37);
-            this.cboCourse.TabIndex = 9;
+            this.cboCourse.TabIndex = 10;
             this.cboCourse.SelectedIndexChanged += new System.EventHandler(this.cboCourse_SelectedIndexChanged);
             // 
             // lblCourse
@@ -251,7 +243,7 @@
             this.btnClose.Location = new System.Drawing.Point(267, 535);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(171, 46);
-            this.btnClose.TabIndex = 11;
+            this.btnClose.TabIndex = 13;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -261,7 +253,7 @@
             this.txtPhone.Location = new System.Drawing.Point(163, 308);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(295, 36);
-            this.txtPhone.TabIndex = 7;
+            this.txtPhone.TabIndex = 8;
             // 
             // cboCounty
             // 
@@ -348,13 +340,21 @@
             this.lblFn.TabIndex = 0;
             this.lblFn.Text = "Name";
             // 
-            // Student
+            // cboModule
+            // 
+            this.cboModule.FormattingEnabled = true;
+            this.cboModule.Location = new System.Drawing.Point(163, 472);
+            this.cboModule.Name = "cboModule";
+            this.cboModule.Size = new System.Drawing.Size(295, 37);
+            this.cboModule.TabIndex = 11;
+            // 
+            // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1005, 651);
             this.Controls.Add(this.gboLecturer);
-            this.Name = "Student";
+            this.Name = "AddStudent";
             this.Text = "Student";
             this.Load += new System.EventHandler(this.Student_Load);
             this.gboLecturer.ResumeLayout(false);
@@ -366,7 +366,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gboLecturer;
-        private System.Windows.Forms.ComboBox cboModule;
         private System.Windows.Forms.Label lblAgeShow;
         private System.Windows.Forms.Label lblModule;
         private System.Windows.Forms.Label lblGe;
@@ -393,5 +392,6 @@
         private System.Windows.Forms.Label lblSn;
         private System.Windows.Forms.Label lblFn;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ComboBox cboModule;
     }
 }

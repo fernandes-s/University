@@ -28,7 +28,6 @@ namespace University
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            //Person p = new Person();
             string fn = txtFn.Text;
             string sn = txtSn.Text;
             string eirC = txtEirCode.Text;
@@ -39,10 +38,11 @@ namespace University
                 ge = "Female";
             string ph = txtPhone.Text;
             string ema = txtEmail.Text;
-            string course = cboCourse.SelectedItem.ToString();
-            string modu = cboModule.SelectedItem.ToString();
+            string cour = cboCourse.SelectedItem.ToString();
+            string mod = cboModule.SelectedItem.ToString();
 
-
+            ap.AddNewStudent(fn, sn, eirC, cy, age, ge, ph, ema, cour, mod);
+            MessageBox.Show("New Student Added to Database", "Data Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
@@ -53,10 +53,6 @@ namespace University
             this.Close();
         }
 
-        private void cboModule_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void cboCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -71,6 +67,13 @@ namespace University
                 cboModule.DataSource = Enum.GetValues(typeof(ModuleMe));
 
 
+        }
+
+        private void dtpAge_ValueChanged(object sender, EventArgs e)
+        {
+            int currentAge = DateTime.Today.Year - dtpAge.Value.Year;
+            lblAgeShow.Text = currentAge.ToString();
+            lblAgeShow.Show();
         }
     }
 }
