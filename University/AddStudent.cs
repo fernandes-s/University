@@ -12,7 +12,6 @@ namespace University
 {
     public partial class AddStudent : Form
     {
-        AddPeople ap = new AddPeople();
         public AddStudent()
         {
             InitializeComponent();
@@ -41,7 +40,9 @@ namespace University
             string cour = cboCourse.SelectedItem.ToString();
             string mod = cboModule.SelectedItem.ToString();
 
-            ap.AddNewStudent(fn, sn, eirC, cy, age, ge, ph, ema, cour, mod);
+            Student s = new Student(fn, sn, eirC, cy, age, ge, ph, ema, cour, mod);
+
+            s.AddNewStudent(fn, sn, eirC, cy, age, ge, ph, ema, cour, mod);
             MessageBox.Show("New Student Added to Database", "Data Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 

@@ -21,6 +21,7 @@ namespace University
         {
             AddLecturer l = new AddLecturer();
             l.ShowDialog();
+            this.Hide();
         }
 
         private void btnStudent_Click(object sender, EventArgs e)

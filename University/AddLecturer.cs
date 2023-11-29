@@ -16,7 +16,6 @@ namespace University
     public partial class AddLecturer : Form
     {
 
-        AddPeople ap = new AddPeople();
         public AddLecturer()
         {
             InitializeComponent();
@@ -46,9 +45,9 @@ namespace University
             string dept = cboDpt.SelectedItem.ToString();
             float pay = float.Parse(txtSal.Text);
 
-            //Lecturer l = new Lecturer(fn, sn,eirC, cy, age, ge, ph, ema, dept, pay);
+            Lecturer l = new Lecturer(fn, sn,eirC, cy, age, ge, ph, ema, dept, pay);
 
-            ap.AddNewLecturer(fn, sn, eirC, cy, age, ge, ph, ema, dept, pay);
+            l.AddNewLecturer(fn, sn, eirC, cy, age, ge, ph, ema, dept, pay);
             MessageBox.Show("New Lecture Added to Database", "Data Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ////message box has four parameters
             ////1 message
