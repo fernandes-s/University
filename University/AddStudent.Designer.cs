@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gboLecturer = new System.Windows.Forms.GroupBox();
+            this.cboModule = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblAgeShow = new System.Windows.Forms.Label();
             this.lblModule = new System.Windows.Forms.Label();
@@ -55,12 +56,13 @@
             this.txtFn = new System.Windows.Forms.TextBox();
             this.lblSn = new System.Windows.Forms.Label();
             this.lblFn = new System.Windows.Forms.Label();
-            this.cboModule = new System.Windows.Forms.ComboBox();
+            this.rdoPNTS = new System.Windows.Forms.RadioButton();
             this.gboLecturer.SuspendLayout();
             this.SuspendLayout();
             // 
             // gboLecturer
             // 
+            this.gboLecturer.Controls.Add(this.rdoPNTS);
             this.gboLecturer.Controls.Add(this.cboModule);
             this.gboLecturer.Controls.Add(this.btnAdd);
             this.gboLecturer.Controls.Add(this.lblAgeShow);
@@ -97,6 +99,14 @@
             this.gboLecturer.TabStop = false;
             this.gboLecturer.Text = "Student";
             // 
+            // cboModule
+            // 
+            this.cboModule.FormattingEnabled = true;
+            this.cboModule.Location = new System.Drawing.Point(163, 472);
+            this.cboModule.Name = "cboModule";
+            this.cboModule.Size = new System.Drawing.Size(399, 37);
+            this.cboModule.TabIndex = 11;
+            // 
             // btnAdd
             // 
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
@@ -115,7 +125,7 @@
             // lblAgeShow
             // 
             this.lblAgeShow.AutoSize = true;
-            this.lblAgeShow.Location = new System.Drawing.Point(407, 221);
+            this.lblAgeShow.Location = new System.Drawing.Point(504, 224);
             this.lblAgeShow.Name = "lblAgeShow";
             this.lblAgeShow.Size = new System.Drawing.Size(0, 29);
             this.lblAgeShow.TabIndex = 32;
@@ -142,7 +152,7 @@
             // 
             this.rdoFemale.AutoSize = true;
             this.rdoFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoFemale.Location = new System.Drawing.Point(319, 268);
+            this.rdoFemale.Location = new System.Drawing.Point(267, 268);
             this.rdoFemale.Name = "rdoFemale";
             this.rdoFemale.Size = new System.Drawing.Size(98, 29);
             this.rdoFemale.TabIndex = 7;
@@ -186,7 +196,7 @@
             // 
             this.txtSn.Location = new System.Drawing.Point(163, 73);
             this.txtSn.Name = "txtSn";
-            this.txtSn.Size = new System.Drawing.Size(295, 36);
+            this.txtSn.Size = new System.Drawing.Size(399, 36);
             this.txtSn.TabIndex = 2;
             // 
             // dtpAge
@@ -194,7 +204,7 @@
             this.dtpAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpAge.Location = new System.Drawing.Point(163, 224);
             this.dtpAge.Name = "dtpAge";
-            this.dtpAge.Size = new System.Drawing.Size(200, 26);
+            this.dtpAge.Size = new System.Drawing.Size(275, 26);
             this.dtpAge.TabIndex = 5;
             this.dtpAge.ValueChanged += new System.EventHandler(this.dtpAge_ValueChanged);
             // 
@@ -212,7 +222,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(163, 366);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(295, 36);
+            this.txtEmail.Size = new System.Drawing.Size(399, 36);
             this.txtEmail.TabIndex = 9;
             // 
             // cboCourse
@@ -220,7 +230,7 @@
             this.cboCourse.FormattingEnabled = true;
             this.cboCourse.Location = new System.Drawing.Point(163, 425);
             this.cboCourse.Name = "cboCourse";
-            this.cboCourse.Size = new System.Drawing.Size(295, 37);
+            this.cboCourse.Size = new System.Drawing.Size(399, 37);
             this.cboCourse.TabIndex = 10;
             this.cboCourse.SelectedIndexChanged += new System.EventHandler(this.cboCourse_SelectedIndexChanged);
             // 
@@ -252,7 +262,7 @@
             // 
             this.txtPhone.Location = new System.Drawing.Point(163, 308);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(295, 36);
+            this.txtPhone.Size = new System.Drawing.Size(399, 36);
             this.txtPhone.TabIndex = 8;
             // 
             // cboCounty
@@ -260,14 +270,14 @@
             this.cboCounty.FormattingEnabled = true;
             this.cboCounty.Location = new System.Drawing.Point(163, 174);
             this.cboCounty.Name = "cboCounty";
-            this.cboCounty.Size = new System.Drawing.Size(295, 37);
+            this.cboCounty.Size = new System.Drawing.Size(399, 37);
             this.cboCounty.TabIndex = 4;
             // 
             // txtEirCode
             // 
             this.txtEirCode.Location = new System.Drawing.Point(163, 115);
             this.txtEirCode.Name = "txtEirCode";
-            this.txtEirCode.Size = new System.Drawing.Size(295, 36);
+            this.txtEirCode.Size = new System.Drawing.Size(399, 36);
             this.txtEirCode.TabIndex = 3;
             // 
             // lblEma
@@ -319,7 +329,7 @@
             // 
             this.txtFn.Location = new System.Drawing.Point(163, 36);
             this.txtFn.Name = "txtFn";
-            this.txtFn.Size = new System.Drawing.Size(295, 36);
+            this.txtFn.Size = new System.Drawing.Size(399, 36);
             this.txtFn.TabIndex = 1;
             // 
             // lblSn
@@ -340,13 +350,16 @@
             this.lblFn.TabIndex = 0;
             this.lblFn.Text = "Name";
             // 
-            // cboModule
+            // rdoPNTS
             // 
-            this.cboModule.FormattingEnabled = true;
-            this.cboModule.Location = new System.Drawing.Point(163, 472);
-            this.cboModule.Name = "cboModule";
-            this.cboModule.Size = new System.Drawing.Size(295, 37);
-            this.cboModule.TabIndex = 11;
+            this.rdoPNTS.AutoSize = true;
+            this.rdoPNTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoPNTS.Location = new System.Drawing.Point(388, 268);
+            this.rdoPNTS.Name = "rdoPNTS";
+            this.rdoPNTS.Size = new System.Drawing.Size(174, 29);
+            this.rdoPNTS.TabIndex = 33;
+            this.rdoPNTS.Text = "Prefer not to say";
+            this.rdoPNTS.UseVisualStyleBackColor = true;
             // 
             // AddStudent
             // 
@@ -393,5 +406,6 @@
         private System.Windows.Forms.Label lblFn;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cboModule;
+        private System.Windows.Forms.RadioButton rdoPNTS;
     }
 }

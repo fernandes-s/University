@@ -40,6 +40,10 @@ namespace University
             {
                 ge = "Female";
             }
+            else if (rdoFluid.Checked)
+            {
+                ge = "Fluid";
+            }
             string ph = txtPhone.Text;
             string ema = txtEmail.Text;
             string dept = cboDpt.SelectedItem.ToString();

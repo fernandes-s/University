@@ -87,10 +87,12 @@ namespace University
 
     enum Gender
     {
-        Both,
+        Select,        
         Male,
-        Female
+        Female,
+        Fluid
     }
 
 
 }
+    

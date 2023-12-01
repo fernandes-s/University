@@ -56,11 +56,13 @@
             this.txtFn = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.rdoFluid = new System.Windows.Forms.RadioButton();
             this.gboLecturer.SuspendLayout();
             this.SuspendLayout();
             // 
             // gboLecturer
             // 
+            this.gboLecturer.Controls.Add(this.rdoFluid);
             this.gboLecturer.Controls.Add(this.lblAgeShow);
             this.gboLecturer.Controls.Add(this.txtSal);
             this.gboLecturer.Controls.Add(this.lblSal);
@@ -100,7 +102,7 @@
             // lblAgeShow
             // 
             this.lblAgeShow.AutoSize = true;
-            this.lblAgeShow.Location = new System.Drawing.Point(407, 221);
+            this.lblAgeShow.Location = new System.Drawing.Point(504, 224);
             this.lblAgeShow.Name = "lblAgeShow";
             this.lblAgeShow.Size = new System.Drawing.Size(0, 29);
             this.lblAgeShow.TabIndex = 32;
@@ -109,7 +111,7 @@
             // 
             this.txtSal.Location = new System.Drawing.Point(163, 465);
             this.txtSal.Name = "txtSal";
-            this.txtSal.Size = new System.Drawing.Size(295, 36);
+            this.txtSal.Size = new System.Drawing.Size(399, 36);
             this.txtSal.TabIndex = 31;
             // 
             // lblSal
@@ -134,7 +136,7 @@
             // 
             this.rdoFemale.AutoSize = true;
             this.rdoFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoFemale.Location = new System.Drawing.Point(319, 268);
+            this.rdoFemale.Location = new System.Drawing.Point(266, 268);
             this.rdoFemale.Name = "rdoFemale";
             this.rdoFemale.Size = new System.Drawing.Size(98, 29);
             this.rdoFemale.TabIndex = 27;
@@ -178,7 +180,7 @@
             // 
             this.txtSn.Location = new System.Drawing.Point(163, 73);
             this.txtSn.Name = "txtSn";
-            this.txtSn.Size = new System.Drawing.Size(295, 36);
+            this.txtSn.Size = new System.Drawing.Size(399, 36);
             this.txtSn.TabIndex = 22;
             // 
             // dtpAge
@@ -186,7 +188,7 @@
             this.dtpAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpAge.Location = new System.Drawing.Point(163, 224);
             this.dtpAge.Name = "dtpAge";
-            this.dtpAge.Size = new System.Drawing.Size(200, 26);
+            this.dtpAge.Size = new System.Drawing.Size(274, 26);
             this.dtpAge.TabIndex = 5;
             this.dtpAge.ValueChanged += new System.EventHandler(this.dtpAge_ValueChanged);
             // 
@@ -204,7 +206,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(163, 366);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(295, 36);
+            this.txtEmail.Size = new System.Drawing.Size(399, 36);
             this.txtEmail.TabIndex = 8;
             // 
             // cboDpt
@@ -212,7 +214,7 @@
             this.cboDpt.FormattingEnabled = true;
             this.cboDpt.Location = new System.Drawing.Point(163, 425);
             this.cboDpt.Name = "cboDpt";
-            this.cboDpt.Size = new System.Drawing.Size(295, 37);
+            this.cboDpt.Size = new System.Drawing.Size(399, 37);
             this.cboDpt.TabIndex = 9;
             // 
             // lblMod
@@ -258,7 +260,7 @@
             // 
             this.txtPhone.Location = new System.Drawing.Point(163, 308);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(295, 36);
+            this.txtPhone.Size = new System.Drawing.Size(399, 36);
             this.txtPhone.TabIndex = 7;
             // 
             // cboCounty
@@ -266,14 +268,14 @@
             this.cboCounty.FormattingEnabled = true;
             this.cboCounty.Location = new System.Drawing.Point(163, 174);
             this.cboCounty.Name = "cboCounty";
-            this.cboCounty.Size = new System.Drawing.Size(295, 37);
+            this.cboCounty.Size = new System.Drawing.Size(399, 37);
             this.cboCounty.TabIndex = 4;
             // 
             // txtEirCode
             // 
             this.txtEirCode.Location = new System.Drawing.Point(163, 115);
             this.txtEirCode.Name = "txtEirCode";
-            this.txtEirCode.Size = new System.Drawing.Size(295, 36);
+            this.txtEirCode.Size = new System.Drawing.Size(399, 36);
             this.txtEirCode.TabIndex = 3;
             // 
             // lblEmail
@@ -325,7 +327,7 @@
             // 
             this.txtFn.Location = new System.Drawing.Point(163, 36);
             this.txtFn.Name = "txtFn";
-            this.txtFn.Size = new System.Drawing.Size(295, 36);
+            this.txtFn.Size = new System.Drawing.Size(399, 36);
             this.txtFn.TabIndex = 1;
             // 
             // label2
@@ -346,13 +348,24 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             // 
-            // Lecturer
+            // rdoFluid
+            // 
+            this.rdoFluid.AutoSize = true;
+            this.rdoFluid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoFluid.Location = new System.Drawing.Point(388, 268);
+            this.rdoFluid.Name = "rdoFluid";
+            this.rdoFluid.Size = new System.Drawing.Size(94, 36);
+            this.rdoFluid.TabIndex = 33;
+            this.rdoFluid.Text = "Fluid";
+            this.rdoFluid.UseVisualStyleBackColor = true;
+            // 
+            // AddLecturer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 718);
             this.Controls.Add(this.gboLecturer);
-            this.Name = "Lecturer";
+            this.Name = "AddLecturer";
             this.Text = "Lecturer";
             this.Load += new System.EventHandler(this.Lecturer_Load);
             this.gboLecturer.ResumeLayout(false);
@@ -391,5 +404,6 @@
         private System.Windows.Forms.TextBox txtSal;
         private System.Windows.Forms.Label lblSal;
         private System.Windows.Forms.Label lblAgeShow;
+        private System.Windows.Forms.RadioButton rdoFluid;
     }
 }

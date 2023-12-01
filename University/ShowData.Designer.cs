@@ -38,12 +38,12 @@
             this.lblSal = new System.Windows.Forms.Label();
             this.LblCy = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.rdoUnder50 = new System.Windows.Forms.RadioButton();
-            this.rdoUnder100 = new System.Windows.Forms.RadioButton();
-            this.rdoOver100 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rdoUnder50k = new System.Windows.Forms.RadioButton();
+            this.rdoOver100k = new System.Windows.Forms.RadioButton();
+            this.rdo50over = new System.Windows.Forms.RadioButton();
+            this.rdo31to49 = new System.Windows.Forms.RadioButton();
+            this.rdb18to30 = new System.Windows.Forms.RadioButton();
+            this.rdo50to100k = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,83 +157,89 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // rdoUnder50
+            // rdoUnder50k
             // 
-            this.rdoUnder50.AutoSize = true;
-            this.rdoUnder50.Location = new System.Drawing.Point(679, 64);
-            this.rdoUnder50.Name = "rdoUnder50";
-            this.rdoUnder50.Size = new System.Drawing.Size(97, 20);
-            this.rdoUnder50.TabIndex = 46;
-            this.rdoUnder50.TabStop = true;
-            this.rdoUnder50.Text = "Under $50K";
-            this.rdoUnder50.UseVisualStyleBackColor = true;
+            this.rdoUnder50k.AutoSize = true;
+            this.rdoUnder50k.Location = new System.Drawing.Point(679, 64);
+            this.rdoUnder50k.Name = "rdoUnder50k";
+            this.rdoUnder50k.Size = new System.Drawing.Size(97, 20);
+            this.rdoUnder50k.TabIndex = 46;
+            this.rdoUnder50k.TabStop = true;
+            this.rdoUnder50k.Text = "Under $50K";
+            this.rdoUnder50k.UseVisualStyleBackColor = true;
+            this.rdoUnder50k.CheckedChanged += new System.EventHandler(this.rdoUnder50k_CheckedChanged);
             // 
-            // rdoUnder100
+            // rdoOver100k
             // 
-            this.rdoUnder100.AutoSize = true;
-            this.rdoUnder100.Location = new System.Drawing.Point(679, 90);
-            this.rdoUnder100.Name = "rdoUnder100";
-            this.rdoUnder100.Size = new System.Drawing.Size(104, 20);
-            this.rdoUnder100.TabIndex = 47;
-            this.rdoUnder100.TabStop = true;
-            this.rdoUnder100.Text = "Under $100K";
-            this.rdoUnder100.UseVisualStyleBackColor = true;
+            this.rdoOver100k.AutoSize = true;
+            this.rdoOver100k.Location = new System.Drawing.Point(679, 116);
+            this.rdoOver100k.Name = "rdoOver100k";
+            this.rdoOver100k.Size = new System.Drawing.Size(96, 20);
+            this.rdoOver100k.TabIndex = 48;
+            this.rdoOver100k.TabStop = true;
+            this.rdoOver100k.Text = "Over $100K";
+            this.rdoOver100k.UseVisualStyleBackColor = true;
+            this.rdoOver100k.CheckedChanged += new System.EventHandler(this.rdoOver100k_CheckedChanged);
             // 
-            // rdoOver100
+            // rdo50over
             // 
-            this.rdoOver100.AutoSize = true;
-            this.rdoOver100.Location = new System.Drawing.Point(679, 116);
-            this.rdoOver100.Name = "rdoOver100";
-            this.rdoOver100.Size = new System.Drawing.Size(96, 20);
-            this.rdoOver100.TabIndex = 48;
-            this.rdoOver100.TabStop = true;
-            this.rdoOver100.Text = "Over $100K";
-            this.rdoOver100.UseVisualStyleBackColor = true;
+            this.rdo50over.AutoSize = true;
+            this.rdo50over.Location = new System.Drawing.Point(846, 116);
+            this.rdo50over.Name = "rdo50over";
+            this.rdo50over.Size = new System.Drawing.Size(74, 20);
+            this.rdo50over.TabIndex = 51;
+            this.rdo50over.TabStop = true;
+            this.rdo50over.Text = "Over 50";
+            this.rdo50over.UseVisualStyleBackColor = true;
+            this.rdo50over.CheckedChanged += new System.EventHandler(this.rdo50over_CheckedChanged);
             // 
-            // radioButton1
+            // rdo31to49
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(846, 116);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(66, 20);
-            this.radioButton1.TabIndex = 51;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "54 - 65";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdo31to49.AutoSize = true;
+            this.rdo31to49.Location = new System.Drawing.Point(846, 90);
+            this.rdo31to49.Name = "rdo31to49";
+            this.rdo31to49.Size = new System.Drawing.Size(66, 20);
+            this.rdo31to49.TabIndex = 50;
+            this.rdo31to49.TabStop = true;
+            this.rdo31to49.Text = "31 - 49";
+            this.rdo31to49.UseVisualStyleBackColor = true;
+            this.rdo31to49.CheckedChanged += new System.EventHandler(this.rdo31to49_CheckedChanged);
             // 
-            // radioButton2
+            // rdb18to30
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(846, 90);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(66, 20);
-            this.radioButton2.TabIndex = 50;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "41 - 53";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdb18to30.AutoSize = true;
+            this.rdb18to30.Location = new System.Drawing.Point(846, 64);
+            this.rdb18to30.Name = "rdb18to30";
+            this.rdb18to30.Size = new System.Drawing.Size(66, 20);
+            this.rdb18to30.TabIndex = 52;
+            this.rdb18to30.TabStop = true;
+            this.rdb18to30.Text = "18 - 30";
+            this.rdb18to30.UseVisualStyleBackColor = true;
+            this.rdb18to30.CheckedChanged += new System.EventHandler(this.rdb18to40_CheckedChanged);
             // 
-            // radioButton3
+            // rdo50to100k
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(846, 64);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(66, 20);
-            this.radioButton3.TabIndex = 49;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "18 - 40";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdo50to100k.AutoSize = true;
+            this.rdo50to100k.Location = new System.Drawing.Point(678, 90);
+            this.rdo50to100k.Name = "rdo50to100k";
+            this.rdo50to100k.Size = new System.Drawing.Size(95, 20);
+            this.rdo50to100k.TabIndex = 53;
+            this.rdo50to100k.TabStop = true;
+            this.rdo50to100k.Text = "$50K - 100k";
+            this.rdo50to100k.UseVisualStyleBackColor = true;
+            this.rdo50to100k.CheckedChanged += new System.EventHandler(this.rdo50to100k_CheckedChanged);
             // 
             // ShowData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 577);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.rdoOver100);
-            this.Controls.Add(this.rdoUnder100);
-            this.Controls.Add(this.rdoUnder50);
+            this.ClientSize = new System.Drawing.Size(1175, 626);
+            this.Controls.Add(this.rdo50to100k);
+            this.Controls.Add(this.rdb18to30);
+            this.Controls.Add(this.rdo50over);
+            this.Controls.Add(this.rdo31to49);
+            this.Controls.Add(this.rdoOver100k);
+            this.Controls.Add(this.rdoUnder50k);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.LblCy);
             this.Controls.Add(this.lblSal);
@@ -265,11 +271,11 @@
         private System.Windows.Forms.Label lblSal;
         private System.Windows.Forms.Label LblCy;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.RadioButton rdoUnder50;
-        private System.Windows.Forms.RadioButton rdoUnder100;
-        private System.Windows.Forms.RadioButton rdoOver100;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rdoUnder50k;
+        private System.Windows.Forms.RadioButton rdoOver100k;
+        private System.Windows.Forms.RadioButton rdo50over;
+        private System.Windows.Forms.RadioButton rdo31to49;
+        private System.Windows.Forms.RadioButton rdb18to30;
+        private System.Windows.Forms.RadioButton rdo50to100k;
     }
 }
