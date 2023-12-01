@@ -27,7 +27,9 @@ namespace University
         private void ShowData_Load(object sender, EventArgs e)
         {
             cboShowGender.DataSource = Enum.GetValues(typeof(Gender));
+            cboShowGenderStu.DataSource = Enum.GetValues(typeof(Gender));
             cboShowCy.DataSource = Enum.GetValues(typeof(Counties));
+            cboShowCyStu.DataSource = Enum.GetValues(typeof (Counties));
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -37,70 +39,82 @@ namespace University
 
         private void btnShowLecturers_Click(object sender, EventArgs e)
         {
-            Usp("uspAllLecturer");
+            UspLec("uspAllLecturer");
         }
 
         private void btnShowStu_Click(object sender, EventArgs e)
         {
-            Usp("uspAllStudent");
+            UspStu("uspAllStudent");
 
-        }
-
-       
+        }       
 
         private void cboShowGender_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selectedOption = cboShowGender.SelectedItem?.ToString();
-            //if (cboShowGender.SelectedIndex.Equals(1))
-            //{
-            //    GeChoice("uspGenStudent");
-            //}
+        {            
             if (cboShowGender.SelectedIndex.Equals(1))
             {
-                GeChoice("uspGenLecturer");
+                GeChoiceLec("uspGenLecturer");
             }
             if (cboShowGender.SelectedIndex.Equals(2))
             {
-                GeChoice("uspGenLecturer");
+                GeChoiceLec("uspGenLecturer");
             }
-            
-
         }
 
-        
+        private void cboShowGenderStu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboShowGender.SelectedIndex.Equals(1))
+            {
+                GeChoiceStu("uspGenStudent");
+            }
+            if (cboShowGender.SelectedIndex.Equals(2))
+            {
+                GeChoiceStu("uspGenStudent");
+            }
+        }
+
+
         private void rdb18to40_CheckedChanged(object sender, EventArgs e)
         {
-            Usp("uspStudentAge18");
+            UspStu("uspStudentAge18");
         }
 
         private void rdo31to49_CheckedChanged(object sender, EventArgs e)
         {
-            Usp("uspStudentAge31");
+            UspStu("uspStudentAge31");
 
         }
 
         private void rdo50over_CheckedChanged(object sender, EventArgs e)
         {
-            Usp("uspStudentAge50");
+            UspStu("uspStudentAge50");
 
         }
 
         private void rdoUnder50k_CheckedChanged(object sender, EventArgs e)
         {
-            Usp("uspLecturerSalUnder50");
+            UspLec("uspLecturerSalUnder50");
         }
 
         private void rdo50to100k_CheckedChanged(object sender, EventArgs e)
         {
-            Usp("uspLecturerSalBet50to100");
+            UspLec("uspLecturerSalBet50to100");
         }
 
         private void rdoOver100k_CheckedChanged(object sender, EventArgs e)
         {
-            Usp("uspLecturerSalOver100");
+            UspLec("uspLecturerSalOver100");
         }
 
-        public string GeChoice(string procedureName)
+        private void cboShowCy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CyChoiceLec("uspLecturerCy");
+        }
+
+        private void cboShowCyStu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CyChoiceStu("uspStudentCy");
+        }
+        public string GeChoiceLec(string procedureName)
         {
 
             //have a look at fluid gender 
@@ -117,13 +131,71 @@ namespace University
 
             da.SelectCommand = cmd;
             da.Fill(dt);
-            dgv.DataSource = dt;
+            dgvLecturer.DataSource = dt;
             dao.CloseCon();
             return ge;
-
         }
 
-        void Usp (string procedureName)
+        public string GeChoiceStu(string procedureName)
+        {
+
+            //have a look at fluid gender 
+            //needs to show up
+
+            string ge = cboShowGender.SelectedItem.ToString();
+            da = new SqlDataAdapter();
+            dt = new DataTable();
+
+            SqlCommand cmd = dao.OpenCon().CreateCommand();
+            cmd.CommandText = procedureName;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@ge", ge);
+
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            dgvStudent.DataSource = dt;
+            dao.CloseCon();
+            return ge;
+        }
+
+
+        public string CyChoiceLec(string procedureName)
+        {
+            string cy = cboShowCy.SelectedItem.ToString();
+            da = new SqlDataAdapter();
+            dt = new DataTable();
+
+            SqlCommand cmd = dao.OpenCon().CreateCommand();
+            cmd.CommandText = procedureName;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@cy", cy);
+
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            dgvLecturer.DataSource = dt;
+            dao.CloseCon();
+            return cy;
+        }
+        public string CyChoiceStu(string procedureName)
+        {
+            string cy = cboShowCyStu.SelectedItem.ToString();
+            da = new SqlDataAdapter();
+            dt = new DataTable();
+
+            SqlCommand cmd = dao.OpenCon().CreateCommand();
+            cmd.CommandText = procedureName;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@cy", cy);
+
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            dgvStudent.DataSource = dt;
+            dao.CloseCon();
+            return cy;
+        }
+
+
+        void UspStu (string procedureName)
         {
             da = new SqlDataAdapter();
             dt = new DataTable();
@@ -134,9 +206,28 @@ namespace University
 
             da.SelectCommand = cmd;
             da.Fill(dt);
-            dgv.DataSource = dt;
+            dgvStudent.DataSource = dt;
             dao.CloseCon();
         }
+
+        void UspLec(string procedureName)
+        {
+            da = new SqlDataAdapter();
+            dt = new DataTable();
+
+            SqlCommand cmd = dao.OpenCon().CreateCommand();
+            cmd.CommandText = procedureName;
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            dgvLecturer.DataSource = dt;
+            dao.CloseCon();
+        }
+
+
+
+
 
 
     }

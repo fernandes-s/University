@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgv = new System.Windows.Forms.DataGridView();
+            this.dgvLecturer = new System.Windows.Forms.DataGridView();
             this.btnShowStu = new System.Windows.Forms.Button();
             this.btnShowLecturers = new System.Windows.Forms.Button();
             this.cboShowGender = new System.Windows.Forms.ComboBox();
@@ -44,18 +44,24 @@
             this.rdo31to49 = new System.Windows.Forms.RadioButton();
             this.rdb18to30 = new System.Windows.Forms.RadioButton();
             this.rdo50to100k = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            this.dgvStudent = new System.Windows.Forms.DataGridView();
+            this.lblGeStu = new System.Windows.Forms.Label();
+            this.cboShowGenderStu = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cboShowCyStu = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLecturer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgv
+            // dgvLecturer
             // 
-            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(12, 182);
-            this.dgv.Name = "dgv";
-            this.dgv.RowHeadersWidth = 51;
-            this.dgv.RowTemplate.Height = 24;
-            this.dgv.Size = new System.Drawing.Size(982, 383);
-            this.dgv.TabIndex = 0;
+            this.dgvLecturer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLecturer.Location = new System.Drawing.Point(12, 97);
+            this.dgvLecturer.Name = "dgvLecturer";
+            this.dgvLecturer.RowHeadersWidth = 51;
+            this.dgvLecturer.RowTemplate.Height = 24;
+            this.dgvLecturer.Size = new System.Drawing.Size(1429, 195);
+            this.dgvLecturer.TabIndex = 0;
             // 
             // btnShowStu
             // 
@@ -64,7 +70,7 @@
             this.btnShowStu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnShowStu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowStu.Font = new System.Drawing.Font("Arial", 16F);
-            this.btnShowStu.Location = new System.Drawing.Point(12, 25);
+            this.btnShowStu.Location = new System.Drawing.Point(12, 332);
             this.btnShowStu.Name = "btnShowStu";
             this.btnShowStu.Size = new System.Drawing.Size(171, 46);
             this.btnShowStu.TabIndex = 35;
@@ -79,7 +85,7 @@
             this.btnShowLecturers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnShowLecturers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowLecturers.Font = new System.Drawing.Font("Arial", 16F);
-            this.btnShowLecturers.Location = new System.Drawing.Point(12, 102);
+            this.btnShowLecturers.Location = new System.Drawing.Point(12, 12);
             this.btnShowLecturers.Name = "btnShowLecturers";
             this.btnShowLecturers.Size = new System.Drawing.Size(171, 46);
             this.btnShowLecturers.TabIndex = 36;
@@ -91,7 +97,7 @@
             // 
             this.cboShowGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboShowGender.FormattingEnabled = true;
-            this.cboShowGender.Location = new System.Drawing.Point(215, 64);
+            this.cboShowGender.Location = new System.Drawing.Point(212, 19);
             this.cboShowGender.Name = "cboShowGender";
             this.cboShowGender.Size = new System.Drawing.Size(181, 39);
             this.cboShowGender.TabIndex = 37;
@@ -101,15 +107,16 @@
             // 
             this.cboShowCy.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboShowCy.FormattingEnabled = true;
-            this.cboShowCy.Location = new System.Drawing.Point(436, 64);
+            this.cboShowCy.Location = new System.Drawing.Point(433, 19);
             this.cboShowCy.Name = "cboShowCy";
             this.cboShowCy.Size = new System.Drawing.Size(181, 39);
             this.cboShowCy.TabIndex = 40;
+            this.cboShowCy.SelectedIndexChanged += new System.EventHandler(this.cboShowCy_SelectedIndexChanged);
             // 
             // lblGe
             // 
             this.lblGe.AutoSize = true;
-            this.lblGe.Location = new System.Drawing.Point(212, 45);
+            this.lblGe.Location = new System.Drawing.Point(209, 0);
             this.lblGe.Name = "lblGe";
             this.lblGe.Size = new System.Drawing.Size(52, 16);
             this.lblGe.TabIndex = 41;
@@ -118,7 +125,7 @@
             // lblAge
             // 
             this.lblAge.AutoSize = true;
-            this.lblAge.Location = new System.Drawing.Point(843, 45);
+            this.lblAge.Location = new System.Drawing.Point(792, 324);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(32, 16);
             this.lblAge.TabIndex = 42;
@@ -127,7 +134,7 @@
             // lblSal
             // 
             this.lblSal.AutoSize = true;
-            this.lblSal.Location = new System.Drawing.Point(676, 45);
+            this.lblSal.Location = new System.Drawing.Point(784, 9);
             this.lblSal.Name = "lblSal";
             this.lblSal.Size = new System.Drawing.Size(46, 16);
             this.lblSal.TabIndex = 43;
@@ -136,7 +143,7 @@
             // LblCy
             // 
             this.LblCy.AutoSize = true;
-            this.LblCy.Location = new System.Drawing.Point(433, 45);
+            this.LblCy.Location = new System.Drawing.Point(430, 0);
             this.LblCy.Name = "LblCy";
             this.LblCy.Size = new System.Drawing.Size(48, 16);
             this.LblCy.TabIndex = 44;
@@ -149,7 +156,7 @@
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Arial", 16F);
-            this.btnClose.Location = new System.Drawing.Point(870, 507);
+            this.btnClose.Location = new System.Drawing.Point(1387, 323);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(114, 47);
             this.btnClose.TabIndex = 45;
@@ -160,7 +167,7 @@
             // rdoUnder50k
             // 
             this.rdoUnder50k.AutoSize = true;
-            this.rdoUnder50k.Location = new System.Drawing.Point(679, 64);
+            this.rdoUnder50k.Location = new System.Drawing.Point(653, 38);
             this.rdoUnder50k.Name = "rdoUnder50k";
             this.rdoUnder50k.Size = new System.Drawing.Size(97, 20);
             this.rdoUnder50k.TabIndex = 46;
@@ -172,7 +179,7 @@
             // rdoOver100k
             // 
             this.rdoOver100k.AutoSize = true;
-            this.rdoOver100k.Location = new System.Drawing.Point(679, 116);
+            this.rdoOver100k.Location = new System.Drawing.Point(857, 38);
             this.rdoOver100k.Name = "rdoOver100k";
             this.rdoOver100k.Size = new System.Drawing.Size(96, 20);
             this.rdoOver100k.TabIndex = 48;
@@ -184,7 +191,7 @@
             // rdo50over
             // 
             this.rdo50over.AutoSize = true;
-            this.rdo50over.Location = new System.Drawing.Point(846, 116);
+            this.rdo50over.Location = new System.Drawing.Point(836, 350);
             this.rdo50over.Name = "rdo50over";
             this.rdo50over.Size = new System.Drawing.Size(74, 20);
             this.rdo50over.TabIndex = 51;
@@ -196,7 +203,7 @@
             // rdo31to49
             // 
             this.rdo31to49.AutoSize = true;
-            this.rdo31to49.Location = new System.Drawing.Point(846, 90);
+            this.rdo31to49.Location = new System.Drawing.Point(764, 350);
             this.rdo31to49.Name = "rdo31to49";
             this.rdo31to49.Size = new System.Drawing.Size(66, 20);
             this.rdo31to49.TabIndex = 50;
@@ -208,7 +215,7 @@
             // rdb18to30
             // 
             this.rdb18to30.AutoSize = true;
-            this.rdb18to30.Location = new System.Drawing.Point(846, 64);
+            this.rdb18to30.Location = new System.Drawing.Point(692, 350);
             this.rdb18to30.Name = "rdb18to30";
             this.rdb18to30.Size = new System.Drawing.Size(66, 20);
             this.rdb18to30.TabIndex = 52;
@@ -220,7 +227,7 @@
             // rdo50to100k
             // 
             this.rdo50to100k.AutoSize = true;
-            this.rdo50to100k.Location = new System.Drawing.Point(678, 90);
+            this.rdo50to100k.Location = new System.Drawing.Point(756, 38);
             this.rdo50to100k.Name = "rdo50to100k";
             this.rdo50to100k.Size = new System.Drawing.Size(95, 20);
             this.rdo50to100k.TabIndex = 53;
@@ -229,11 +236,64 @@
             this.rdo50to100k.UseVisualStyleBackColor = true;
             this.rdo50to100k.CheckedChanged += new System.EventHandler(this.rdo50to100k_CheckedChanged);
             // 
+            // dgvStudent
+            // 
+            this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudent.Location = new System.Drawing.Point(12, 402);
+            this.dgvStudent.Name = "dgvStudent";
+            this.dgvStudent.RowHeadersWidth = 51;
+            this.dgvStudent.RowTemplate.Height = 24;
+            this.dgvStudent.Size = new System.Drawing.Size(1429, 195);
+            this.dgvStudent.TabIndex = 54;
+            // 
+            // lblGeStu
+            // 
+            this.lblGeStu.AutoSize = true;
+            this.lblGeStu.Location = new System.Drawing.Point(209, 320);
+            this.lblGeStu.Name = "lblGeStu";
+            this.lblGeStu.Size = new System.Drawing.Size(52, 16);
+            this.lblGeStu.TabIndex = 56;
+            this.lblGeStu.Text = "Gender";
+            // 
+            // cboShowGenderStu
+            // 
+            this.cboShowGenderStu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboShowGenderStu.FormattingEnabled = true;
+            this.cboShowGenderStu.Location = new System.Drawing.Point(212, 339);
+            this.cboShowGenderStu.Name = "cboShowGenderStu";
+            this.cboShowGenderStu.Size = new System.Drawing.Size(181, 39);
+            this.cboShowGenderStu.TabIndex = 55;
+            this.cboShowGenderStu.SelectedIndexChanged += new System.EventHandler(this.cboShowGenderStu_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(430, 320);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "County";
+            // 
+            // cboShowCyStu
+            // 
+            this.cboShowCyStu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboShowCyStu.FormattingEnabled = true;
+            this.cboShowCyStu.Location = new System.Drawing.Point(433, 339);
+            this.cboShowCyStu.Name = "cboShowCyStu";
+            this.cboShowCyStu.Size = new System.Drawing.Size(181, 39);
+            this.cboShowCyStu.TabIndex = 57;
+            this.cboShowCyStu.SelectedIndexChanged += new System.EventHandler(this.cboShowCyStu_SelectedIndexChanged);
+            // 
             // ShowData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 626);
+            this.ClientSize = new System.Drawing.Size(1536, 646);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cboShowCyStu);
+            this.Controls.Add(this.lblGeStu);
+            this.Controls.Add(this.cboShowGenderStu);
+            this.Controls.Add(this.dgvStudent);
             this.Controls.Add(this.rdo50to100k);
             this.Controls.Add(this.rdb18to30);
             this.Controls.Add(this.rdo50over);
@@ -249,11 +309,12 @@
             this.Controls.Add(this.cboShowGender);
             this.Controls.Add(this.btnShowLecturers);
             this.Controls.Add(this.btnShowStu);
-            this.Controls.Add(this.dgv);
+            this.Controls.Add(this.dgvLecturer);
             this.Name = "ShowData";
             this.Text = "ShowData";
             this.Load += new System.EventHandler(this.ShowData_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLecturer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,7 +322,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.DataGridView dgvLecturer;
         private System.Windows.Forms.Button btnShowStu;
         private System.Windows.Forms.Button btnShowLecturers;
         private System.Windows.Forms.ComboBox cboShowGender;
@@ -277,5 +338,10 @@
         private System.Windows.Forms.RadioButton rdo31to49;
         private System.Windows.Forms.RadioButton rdb18to30;
         private System.Windows.Forms.RadioButton rdo50to100k;
+        private System.Windows.Forms.DataGridView dgvStudent;
+        private System.Windows.Forms.Label lblGeStu;
+        private System.Windows.Forms.ComboBox cboShowGenderStu;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cboShowCyStu;
     }
 }
