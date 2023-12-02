@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gboLecturer = new System.Windows.Forms.GroupBox();
+            this.rdoFluid = new System.Windows.Forms.RadioButton();
             this.lblAgeShow = new System.Windows.Forms.Label();
             this.txtSal = new System.Windows.Forms.TextBox();
             this.lblSal = new System.Windows.Forms.Label();
@@ -53,15 +55,17 @@
             this.lblAge = new System.Windows.Forms.Label();
             this.lblCy = new System.Windows.Forms.Label();
             this.lblEirCode = new System.Windows.Forms.Label();
-            this.txtFn = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.rdoFluid = new System.Windows.Forms.RadioButton();
+            this.epError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtFn = new System.Windows.Forms.TextBox();
             this.gboLecturer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).BeginInit();
             this.SuspendLayout();
             // 
             // gboLecturer
             // 
+            this.gboLecturer.Controls.Add(this.txtFn);
             this.gboLecturer.Controls.Add(this.rdoFluid);
             this.gboLecturer.Controls.Add(this.lblAgeShow);
             this.gboLecturer.Controls.Add(this.txtSal);
@@ -87,7 +91,6 @@
             this.gboLecturer.Controls.Add(this.lblAge);
             this.gboLecturer.Controls.Add(this.lblCy);
             this.gboLecturer.Controls.Add(this.lblEirCode);
-            this.gboLecturer.Controls.Add(this.txtFn);
             this.gboLecturer.Controls.Add(this.label2);
             this.gboLecturer.Controls.Add(this.lblName);
             this.gboLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,6 +101,17 @@
             this.gboLecturer.TabIndex = 0;
             this.gboLecturer.TabStop = false;
             this.gboLecturer.Text = "Lecturer";
+            // 
+            // rdoFluid
+            // 
+            this.rdoFluid.AutoSize = true;
+            this.rdoFluid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoFluid.Location = new System.Drawing.Point(388, 268);
+            this.rdoFluid.Name = "rdoFluid";
+            this.rdoFluid.Size = new System.Drawing.Size(75, 29);
+            this.rdoFluid.TabIndex = 8;
+            this.rdoFluid.Text = "Fluid";
+            this.rdoFluid.UseVisualStyleBackColor = true;
             // 
             // lblAgeShow
             // 
@@ -112,7 +126,7 @@
             this.txtSal.Location = new System.Drawing.Point(163, 465);
             this.txtSal.Name = "txtSal";
             this.txtSal.Size = new System.Drawing.Size(399, 36);
-            this.txtSal.TabIndex = 31;
+            this.txtSal.TabIndex = 12;
             // 
             // lblSal
             // 
@@ -139,7 +153,7 @@
             this.rdoFemale.Location = new System.Drawing.Point(266, 268);
             this.rdoFemale.Name = "rdoFemale";
             this.rdoFemale.Size = new System.Drawing.Size(98, 29);
-            this.rdoFemale.TabIndex = 27;
+            this.rdoFemale.TabIndex = 7;
             this.rdoFemale.Text = "Female";
             this.rdoFemale.UseVisualStyleBackColor = true;
             // 
@@ -151,7 +165,7 @@
             this.rdoMale.Location = new System.Drawing.Point(163, 268);
             this.rdoMale.Name = "rdoMale";
             this.rdoMale.Size = new System.Drawing.Size(76, 29);
-            this.rdoMale.TabIndex = 26;
+            this.rdoMale.TabIndex = 6;
             this.rdoMale.TabStop = true;
             this.rdoMale.Text = "Male";
             this.rdoMale.UseVisualStyleBackColor = true;
@@ -181,7 +195,7 @@
             this.txtSn.Location = new System.Drawing.Point(163, 73);
             this.txtSn.Name = "txtSn";
             this.txtSn.Size = new System.Drawing.Size(399, 36);
-            this.txtSn.TabIndex = 22;
+            this.txtSn.TabIndex = 2;
             // 
             // dtpAge
             // 
@@ -207,7 +221,7 @@
             this.txtEmail.Location = new System.Drawing.Point(163, 366);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(399, 36);
-            this.txtEmail.TabIndex = 8;
+            this.txtEmail.TabIndex = 10;
             // 
             // cboDpt
             // 
@@ -215,7 +229,7 @@
             this.cboDpt.Location = new System.Drawing.Point(163, 425);
             this.cboDpt.Name = "cboDpt";
             this.cboDpt.Size = new System.Drawing.Size(399, 37);
-            this.cboDpt.TabIndex = 9;
+            this.cboDpt.TabIndex = 11;
             // 
             // lblMod
             // 
@@ -236,7 +250,7 @@
             this.btnClose.Location = new System.Drawing.Point(266, 526);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(171, 46);
-            this.btnClose.TabIndex = 11;
+            this.btnClose.TabIndex = 14;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -251,7 +265,7 @@
             this.btnAdd.Location = new System.Drawing.Point(11, 526);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(171, 46);
-            this.btnAdd.TabIndex = 10;
+            this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "Add Lecturer";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -261,7 +275,7 @@
             this.txtPhone.Location = new System.Drawing.Point(163, 308);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(399, 36);
-            this.txtPhone.TabIndex = 7;
+            this.txtPhone.TabIndex = 9;
             // 
             // cboCounty
             // 
@@ -323,13 +337,6 @@
             this.lblEirCode.TabIndex = 4;
             this.lblEirCode.Text = "Eir Code";
             // 
-            // txtFn
-            // 
-            this.txtFn.Location = new System.Drawing.Point(163, 36);
-            this.txtFn.Name = "txtFn";
-            this.txtFn.Size = new System.Drawing.Size(399, 36);
-            this.txtFn.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -348,16 +355,16 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             // 
-            // rdoFluid
+            // epError
             // 
-            this.rdoFluid.AutoSize = true;
-            this.rdoFluid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoFluid.Location = new System.Drawing.Point(388, 268);
-            this.rdoFluid.Name = "rdoFluid";
-            this.rdoFluid.Size = new System.Drawing.Size(94, 36);
-            this.rdoFluid.TabIndex = 33;
-            this.rdoFluid.Text = "Fluid";
-            this.rdoFluid.UseVisualStyleBackColor = true;
+            this.epError.ContainerControl = this;
+            // 
+            // txtFn
+            // 
+            this.txtFn.Location = new System.Drawing.Point(163, 36);
+            this.txtFn.Name = "txtFn";
+            this.txtFn.Size = new System.Drawing.Size(399, 36);
+            this.txtFn.TabIndex = 1;
             // 
             // AddLecturer
             // 
@@ -370,6 +377,7 @@
             this.Load += new System.EventHandler(this.Lecturer_Load);
             this.gboLecturer.ResumeLayout(false);
             this.gboLecturer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,7 +387,6 @@
         private System.Windows.Forms.GroupBox gboLecturer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtFn;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblCy;
@@ -405,5 +412,7 @@
         private System.Windows.Forms.Label lblSal;
         private System.Windows.Forms.Label lblAgeShow;
         private System.Windows.Forms.RadioButton rdoFluid;
+        private System.Windows.Forms.ErrorProvider epError;
+        private System.Windows.Forms.TextBox txtFn;
     }
 }

@@ -49,6 +49,10 @@
             this.cboShowGenderStu = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cboShowCyStu = new System.Windows.Forms.ComboBox();
+            this.lblSortAgeStu = new System.Windows.Forms.Label();
+            this.cboSortAgeStu = new System.Windows.Forms.ComboBox();
+            this.lblSortSalLec = new System.Windows.Forms.Label();
+            this.cboSortSalLec = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLecturer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.SuspendLayout();
@@ -156,7 +160,7 @@
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Arial", 16F);
-            this.btnClose.Location = new System.Drawing.Point(1387, 323);
+            this.btnClose.Location = new System.Drawing.Point(1327, 323);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(114, 47);
             this.btnClose.TabIndex = 45;
@@ -179,7 +183,7 @@
             // rdoOver100k
             // 
             this.rdoOver100k.AutoSize = true;
-            this.rdoOver100k.Location = new System.Drawing.Point(857, 38);
+            this.rdoOver100k.Location = new System.Drawing.Point(876, 38);
             this.rdoOver100k.Name = "rdoOver100k";
             this.rdoOver100k.Size = new System.Drawing.Size(96, 20);
             this.rdoOver100k.TabIndex = 48;
@@ -191,7 +195,7 @@
             // rdo50over
             // 
             this.rdo50over.AutoSize = true;
-            this.rdo50over.Location = new System.Drawing.Point(836, 350);
+            this.rdo50over.Location = new System.Drawing.Point(848, 350);
             this.rdo50over.Name = "rdo50over";
             this.rdo50over.Size = new System.Drawing.Size(74, 20);
             this.rdo50over.TabIndex = 51;
@@ -215,7 +219,7 @@
             // rdb18to30
             // 
             this.rdb18to30.AutoSize = true;
-            this.rdb18to30.Location = new System.Drawing.Point(692, 350);
+            this.rdb18to30.Location = new System.Drawing.Point(678, 350);
             this.rdb18to30.Name = "rdb18to30";
             this.rdb18to30.Size = new System.Drawing.Size(66, 20);
             this.rdb18to30.TabIndex = 52;
@@ -227,7 +231,7 @@
             // rdo50to100k
             // 
             this.rdo50to100k.AutoSize = true;
-            this.rdo50to100k.Location = new System.Drawing.Point(756, 38);
+            this.rdo50to100k.Location = new System.Drawing.Point(764, 38);
             this.rdo50to100k.Name = "rdo50to100k";
             this.rdo50to100k.Size = new System.Drawing.Size(95, 20);
             this.rdo50to100k.TabIndex = 53;
@@ -284,11 +288,51 @@
             this.cboShowCyStu.TabIndex = 57;
             this.cboShowCyStu.SelectedIndexChanged += new System.EventHandler(this.cboShowCyStu_SelectedIndexChanged);
             // 
+            // lblSortAgeStu
+            // 
+            this.lblSortAgeStu.AutoSize = true;
+            this.lblSortAgeStu.Location = new System.Drawing.Point(1002, 320);
+            this.lblSortAgeStu.Name = "lblSortAgeStu";
+            this.lblSortAgeStu.Size = new System.Drawing.Size(59, 16);
+            this.lblSortAgeStu.TabIndex = 60;
+            this.lblSortAgeStu.Text = "Sort Age";
+            // 
+            // cboSortAgeStu
+            // 
+            this.cboSortAgeStu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSortAgeStu.FormattingEnabled = true;
+            this.cboSortAgeStu.Location = new System.Drawing.Point(1005, 339);
+            this.cboSortAgeStu.Name = "cboSortAgeStu";
+            this.cboSortAgeStu.Size = new System.Drawing.Size(181, 39);
+            this.cboSortAgeStu.TabIndex = 59;
+            // 
+            // lblSortSalLec
+            // 
+            this.lblSortSalLec.AutoSize = true;
+            this.lblSortSalLec.Location = new System.Drawing.Point(1002, 0);
+            this.lblSortSalLec.Name = "lblSortSalLec";
+            this.lblSortSalLec.Size = new System.Drawing.Size(73, 16);
+            this.lblSortSalLec.TabIndex = 62;
+            this.lblSortSalLec.Text = "Sort Salary";
+            // 
+            // cboSortSalLec
+            // 
+            this.cboSortSalLec.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSortSalLec.FormattingEnabled = true;
+            this.cboSortSalLec.Location = new System.Drawing.Point(1005, 24);
+            this.cboSortSalLec.Name = "cboSortSalLec";
+            this.cboSortSalLec.Size = new System.Drawing.Size(181, 39);
+            this.cboSortSalLec.TabIndex = 61;
+            // 
             // ShowData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1536, 646);
+            this.Controls.Add(this.lblSortSalLec);
+            this.Controls.Add(this.cboSortSalLec);
+            this.Controls.Add(this.lblSortAgeStu);
+            this.Controls.Add(this.cboSortAgeStu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboShowCyStu);
             this.Controls.Add(this.lblGeStu);
@@ -343,5 +387,9 @@
         private System.Windows.Forms.ComboBox cboShowGenderStu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboShowCyStu;
+        private System.Windows.Forms.Label lblSortAgeStu;
+        private System.Windows.Forms.ComboBox cboSortAgeStu;
+        private System.Windows.Forms.Label lblSortSalLec;
+        private System.Windows.Forms.ComboBox cboSortSalLec;
     }
 }

@@ -31,7 +31,7 @@ namespace University
         StatisticsInDataScienceII,
         MathematicalMolecularBiologyI,
         GeneticsAndGenomicsII
-    }
+    };
 
     enum ModuleMe
     {
@@ -40,14 +40,14 @@ namespace University
         PrinciplesOfPharmacology,
         HeadAndNeckAnatomy,
         InfectionandImmunity
-    }
+    };
     enum Department
     {
         ComputerScience,
         Marketing,
         Medicine,
         Genetics
-    }
+    };
 
     enum Counties
     {
@@ -83,7 +83,7 @@ namespace University
         Westmeath,
         Wexford,
         Wicklow
-    }
+    };
 
     enum Gender
     {
@@ -91,7 +91,14 @@ namespace University
         Male,
         Female,
         Fluid
-    }
+    };
+
+    enum Sort
+    {
+        Ascendent,
+        Descendent
+    };
+
 
 
 }

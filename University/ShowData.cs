@@ -22,14 +22,16 @@ namespace University
         {
             InitializeComponent();
         }
-        
+
 
         private void ShowData_Load(object sender, EventArgs e)
         {
             cboShowGender.DataSource = Enum.GetValues(typeof(Gender));
             cboShowGenderStu.DataSource = Enum.GetValues(typeof(Gender));
             cboShowCy.DataSource = Enum.GetValues(typeof(Counties));
-            cboShowCyStu.DataSource = Enum.GetValues(typeof (Counties));
+            cboShowCyStu.DataSource = Enum.GetValues(typeof(Counties));
+            cboSortAgeStu.DataSource = Enum.GetValues(typeof(Sort));
+            cboSortSalLec.DataSource = Enum.GetValues(typeof(Sort));
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -46,15 +48,19 @@ namespace University
         {
             UspStu("uspAllStudent");
 
-        }       
+        }
 
         private void cboShowGender_SelectedIndexChanged(object sender, EventArgs e)
-        {            
+        {
             if (cboShowGender.SelectedIndex.Equals(1))
             {
                 GeChoiceLec("uspGenLecturer");
             }
             if (cboShowGender.SelectedIndex.Equals(2))
+            {
+                GeChoiceLec("uspGenLecturer");
+            }
+            if (cboShowGender.SelectedIndex.Equals(3))
             {
                 GeChoiceLec("uspGenLecturer");
             }
@@ -67,6 +73,10 @@ namespace University
                 GeChoiceStu("uspGenStudent");
             }
             if (cboShowGender.SelectedIndex.Equals(2))
+            {
+                GeChoiceStu("uspGenStudent");
+            }
+            if (cboShowGender.SelectedIndex.Equals(3))
             {
                 GeChoiceStu("uspGenStudent");
             }
@@ -114,12 +124,37 @@ namespace University
         {
             CyChoiceStu("uspStudentCy");
         }
-        public string GeChoiceLec(string procedureName)
+
+
+
+
+
+        //Functions under
+
+        //Sort
+        void SortAsc(string procedureName)
         {
+            string age = cboSortAgeStu.SelectedItem.ToString();
+            da = new SqlDataAdapter();
+            dt = new DataTable();
 
-            //have a look at fluid gender 
-            //needs to show up
+            SqlCommand cmd = dao.OpenCon().CreateCommand();
+            cmd.CommandText = procedureName;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("age", age);
 
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            dgvStudent.DataSource = dt;
+            dao.CloseCon();
+
+        }
+
+
+
+        //Gender
+        void GeChoiceLec(string procedureName)
+        {
             string ge = cboShowGender.SelectedItem.ToString();
             da = new SqlDataAdapter();
             dt = new DataTable();
@@ -133,15 +168,10 @@ namespace University
             da.Fill(dt);
             dgvLecturer.DataSource = dt;
             dao.CloseCon();
-            return ge;
         }
 
-        public string GeChoiceStu(string procedureName)
+        void GeChoiceStu(string procedureName)
         {
-
-            //have a look at fluid gender 
-            //needs to show up
-
             string ge = cboShowGender.SelectedItem.ToString();
             da = new SqlDataAdapter();
             dt = new DataTable();
@@ -155,11 +185,11 @@ namespace University
             da.Fill(dt);
             dgvStudent.DataSource = dt;
             dao.CloseCon();
-            return ge;
         }
 
 
-        public string CyChoiceLec(string procedureName)
+        //County
+        void CyChoiceLec(string procedureName)
         {
             string cy = cboShowCy.SelectedItem.ToString();
             da = new SqlDataAdapter();
@@ -174,9 +204,9 @@ namespace University
             da.Fill(dt);
             dgvLecturer.DataSource = dt;
             dao.CloseCon();
-            return cy;
         }
-        public string CyChoiceStu(string procedureName)
+
+        void CyChoiceStu(string procedureName)
         {
             string cy = cboShowCyStu.SelectedItem.ToString();
             da = new SqlDataAdapter();
@@ -191,10 +221,10 @@ namespace University
             da.Fill(dt);
             dgvStudent.DataSource = dt;
             dao.CloseCon();
-            return cy;
         }
 
 
+        //Student
         void UspStu (string procedureName)
         {
             da = new SqlDataAdapter();
@@ -210,6 +240,7 @@ namespace University
             dao.CloseCon();
         }
 
+        //Lecturer
         void UspLec(string procedureName)
         {
             da = new SqlDataAdapter();
