@@ -26,7 +26,7 @@ namespace University
 
         private void ShowData_Load(object sender, EventArgs e)
         {
-            cboShowGender.DataSource = Enum.GetValues(typeof(Gender));
+            cboShowGenderLec.DataSource = Enum.GetValues(typeof(Gender));
             cboShowGenderStu.DataSource = Enum.GetValues(typeof(Gender));
             cboShowCy.DataSource = Enum.GetValues(typeof(Counties));
             cboShowCyStu.DataSource = Enum.GetValues(typeof(Counties));
@@ -52,15 +52,15 @@ namespace University
 
         private void cboShowGender_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboShowGender.SelectedIndex.Equals(1))
+            if (cboShowGenderLec.SelectedIndex.Equals(1))
             {
                 GeChoiceLec("uspGenLecturer");
             }
-            if (cboShowGender.SelectedIndex.Equals(2))
+            else if (cboShowGenderLec.SelectedIndex.Equals(2))
             {
                 GeChoiceLec("uspGenLecturer");
             }
-            if (cboShowGender.SelectedIndex.Equals(3))
+            else if (cboShowGenderLec.SelectedIndex.Equals(3))
             {
                 GeChoiceLec("uspGenLecturer");
             }
@@ -68,15 +68,15 @@ namespace University
 
         private void cboShowGenderStu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboShowGender.SelectedIndex.Equals(1))
+            if (cboShowGenderLec.SelectedIndex.Equals(1))
             {
                 GeChoiceStu("uspGenStudent");
             }
-            if (cboShowGender.SelectedIndex.Equals(2))
+            else if (cboShowGenderLec.SelectedIndex.Equals(2))
             {
                 GeChoiceStu("uspGenStudent");
             }
-            if (cboShowGender.SelectedIndex.Equals(3))
+            else if (cboShowGenderLec.SelectedIndex.Equals(3))
             {
                 GeChoiceStu("uspGenStudent");
             }
@@ -125,14 +125,35 @@ namespace University
             CyChoiceStu("uspStudentCy");
         }
 
+        private void cboSortAgeStu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboSortAgeStu.SelectedIndex.Equals(1))
+            {
+                SortStu("uspSortStudentAgeAsc");
+            }
+            else if (cboSortAgeStu.SelectedIndex.Equals(2))
+            {
+                SortStu("uspSortStudentAgeDesc");
+            }
+        }
+
+        private void cboSortSalLec_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboSortSalLec.SelectedIndex.Equals(1))
+            {
+                SortLec("uspSortLecturerSalAsc");
+            }
+            else if (cboSortSalLec.SelectedIndex.Equals(2))
+            {
+                SortLec("uspSortLecturerSalDesc");
+            }
+        }
 
 
-
-
-        //Functions under
+        //Methods under
 
         //Sort
-        void SortAsc(string procedureName)
+        void SortStu(string procedureName)
         {
             string age = cboSortAgeStu.SelectedItem.ToString();
             da = new SqlDataAdapter();
@@ -150,12 +171,32 @@ namespace University
 
         }
 
+        void SortLec(string procedureName)
+        {
+            //need to fix error for variable, mixing string and money
+
+            //string sal = cboSortSalLec.SelectedItem.ToString();
+            //da = new SqlDataAdapter();
+            //dt = new DataTable();
+
+
+            //SqlCommand cmd = dao.OpenCon().CreateCommand();
+            //cmd.CommandText = procedureName;
+            //cmd.CommandType = CommandType.StoredProcedure;
+            //cmd.Parameters.AddWithValue("pay", sal);
+
+            //da.SelectCommand = cmd;
+            //da.Fill(dt);
+            //dgvStudent.DataSource = dt;
+            //dao.CloseCon();
+        }
+
 
 
         //Gender
         void GeChoiceLec(string procedureName)
         {
-            string ge = cboShowGender.SelectedItem.ToString();
+            string ge = cboShowGenderLec.SelectedItem.ToString();
             da = new SqlDataAdapter();
             dt = new DataTable();
 
@@ -172,7 +213,7 @@ namespace University
 
         void GeChoiceStu(string procedureName)
         {
-            string ge = cboShowGender.SelectedItem.ToString();
+            string ge = cboShowGenderStu.SelectedItem.ToString();
             da = new SqlDataAdapter();
             dt = new DataTable();
 
@@ -256,10 +297,6 @@ namespace University
             dao.CloseCon();
         }
 
-
-
-
-
-
+        
     }
 }

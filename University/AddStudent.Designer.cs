@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gboLecturer = new System.Windows.Forms.GroupBox();
+            this.rdoFluid = new System.Windows.Forms.RadioButton();
             this.cboModule = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblAgeShow = new System.Windows.Forms.Label();
@@ -56,13 +57,12 @@
             this.txtFn = new System.Windows.Forms.TextBox();
             this.lblSn = new System.Windows.Forms.Label();
             this.lblFn = new System.Windows.Forms.Label();
-            this.rdoPNTS = new System.Windows.Forms.RadioButton();
             this.gboLecturer.SuspendLayout();
             this.SuspendLayout();
             // 
             // gboLecturer
             // 
-            this.gboLecturer.Controls.Add(this.rdoPNTS);
+            this.gboLecturer.Controls.Add(this.rdoFluid);
             this.gboLecturer.Controls.Add(this.cboModule);
             this.gboLecturer.Controls.Add(this.btnAdd);
             this.gboLecturer.Controls.Add(this.lblAgeShow);
@@ -98,6 +98,17 @@
             this.gboLecturer.TabIndex = 1;
             this.gboLecturer.TabStop = false;
             this.gboLecturer.Text = "Student";
+            // 
+            // rdoFluid
+            // 
+            this.rdoFluid.AutoSize = true;
+            this.rdoFluid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoFluid.Location = new System.Drawing.Point(388, 268);
+            this.rdoFluid.Name = "rdoFluid";
+            this.rdoFluid.Size = new System.Drawing.Size(94, 36);
+            this.rdoFluid.TabIndex = 33;
+            this.rdoFluid.Text = "Fluid";
+            this.rdoFluid.UseVisualStyleBackColor = true;
             // 
             // cboModule
             // 
@@ -350,17 +361,6 @@
             this.lblFn.TabIndex = 0;
             this.lblFn.Text = "Name";
             // 
-            // rdoPNTS
-            // 
-            this.rdoPNTS.AutoSize = true;
-            this.rdoPNTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoPNTS.Location = new System.Drawing.Point(388, 268);
-            this.rdoPNTS.Name = "rdoPNTS";
-            this.rdoPNTS.Size = new System.Drawing.Size(174, 29);
-            this.rdoPNTS.TabIndex = 33;
-            this.rdoPNTS.Text = "Prefer not to say";
-            this.rdoPNTS.UseVisualStyleBackColor = true;
-            // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -406,6 +406,6 @@
         private System.Windows.Forms.Label lblFn;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cboModule;
-        private System.Windows.Forms.RadioButton rdoPNTS;
+        private System.Windows.Forms.RadioButton rdoFluid;
     }
 }

@@ -34,7 +34,13 @@ namespace University
             string age = lblAgeShow.Text; // use age label or dtp need to check
             string ge = "Male";
             if (rdoFemale.Checked)
+            {
                 ge = "Female";
+            }
+            else if (rdoFluid.Checked)
+            {
+                ge = "Fluid";
+            }
             string ph = txtPhone.Text;
             string ema = txtEmail.Text;
             string cour = cboCourse.SelectedItem.ToString();
@@ -45,6 +51,12 @@ namespace University
             s.AddNewStudent(fn, sn, eirC, cy, age, ge, ph, ema, cour, mod);
             MessageBox.Show("New Student Added to Database", "Data Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+
+            txtFn.Clear();
+            txtSn.Clear();
+            txtEirCode.Clear();
+            txtPhone.Clear();
+            txtEmail.Clear();
 
 
         }

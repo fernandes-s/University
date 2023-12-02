@@ -31,7 +31,7 @@
             this.dgvLecturer = new System.Windows.Forms.DataGridView();
             this.btnShowStu = new System.Windows.Forms.Button();
             this.btnShowLecturers = new System.Windows.Forms.Button();
-            this.cboShowGender = new System.Windows.Forms.ComboBox();
+            this.cboShowGenderLec = new System.Windows.Forms.ComboBox();
             this.cboShowCy = new System.Windows.Forms.ComboBox();
             this.lblGe = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
@@ -97,15 +97,15 @@
             this.btnShowLecturers.UseVisualStyleBackColor = true;
             this.btnShowLecturers.Click += new System.EventHandler(this.btnShowLecturers_Click);
             // 
-            // cboShowGender
+            // cboShowGenderLec
             // 
-            this.cboShowGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboShowGender.FormattingEnabled = true;
-            this.cboShowGender.Location = new System.Drawing.Point(212, 19);
-            this.cboShowGender.Name = "cboShowGender";
-            this.cboShowGender.Size = new System.Drawing.Size(181, 39);
-            this.cboShowGender.TabIndex = 37;
-            this.cboShowGender.SelectedIndexChanged += new System.EventHandler(this.cboShowGender_SelectedIndexChanged);
+            this.cboShowGenderLec.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboShowGenderLec.FormattingEnabled = true;
+            this.cboShowGenderLec.Location = new System.Drawing.Point(212, 19);
+            this.cboShowGenderLec.Name = "cboShowGenderLec";
+            this.cboShowGenderLec.Size = new System.Drawing.Size(181, 39);
+            this.cboShowGenderLec.TabIndex = 37;
+            this.cboShowGenderLec.SelectedIndexChanged += new System.EventHandler(this.cboShowGender_SelectedIndexChanged);
             // 
             // cboShowCy
             // 
@@ -305,6 +305,7 @@
             this.cboSortAgeStu.Name = "cboSortAgeStu";
             this.cboSortAgeStu.Size = new System.Drawing.Size(181, 39);
             this.cboSortAgeStu.TabIndex = 59;
+            this.cboSortAgeStu.SelectedIndexChanged += new System.EventHandler(this.cboSortAgeStu_SelectedIndexChanged);
             // 
             // lblSortSalLec
             // 
@@ -323,6 +324,7 @@
             this.cboSortSalLec.Name = "cboSortSalLec";
             this.cboSortSalLec.Size = new System.Drawing.Size(181, 39);
             this.cboSortSalLec.TabIndex = 61;
+            this.cboSortSalLec.SelectedIndexChanged += new System.EventHandler(this.cboSortSalLec_SelectedIndexChanged);
             // 
             // ShowData
             // 
@@ -350,7 +352,7 @@
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblGe);
             this.Controls.Add(this.cboShowCy);
-            this.Controls.Add(this.cboShowGender);
+            this.Controls.Add(this.cboShowGenderLec);
             this.Controls.Add(this.btnShowLecturers);
             this.Controls.Add(this.btnShowStu);
             this.Controls.Add(this.dgvLecturer);
@@ -369,7 +371,7 @@
         private System.Windows.Forms.DataGridView dgvLecturer;
         private System.Windows.Forms.Button btnShowStu;
         private System.Windows.Forms.Button btnShowLecturers;
-        private System.Windows.Forms.ComboBox cboShowGender;
+        private System.Windows.Forms.ComboBox cboShowGenderLec;
         private System.Windows.Forms.ComboBox cboShowCy;
         private System.Windows.Forms.Label lblGe;
         private System.Windows.Forms.Label lblAge;

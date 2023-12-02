@@ -95,6 +95,7 @@ namespace University
 
     enum Sort
     {
+        Select,
         Ascendent,
         Descendent
     };
