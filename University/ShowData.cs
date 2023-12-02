@@ -68,15 +68,15 @@ namespace University
 
         private void cboShowGenderStu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboShowGenderLec.SelectedIndex.Equals(1))
+            if (cboShowGenderStu.SelectedIndex.Equals(1))
             {
                 GeChoiceStu("uspGenStudent");
             }
-            else if (cboShowGenderLec.SelectedIndex.Equals(2))
+            else if (cboShowGenderStu.SelectedIndex.Equals(2))
             {
                 GeChoiceStu("uspGenStudent");
             }
-            else if (cboShowGenderLec.SelectedIndex.Equals(3))
+            else if (cboShowGenderStu.SelectedIndex.Equals(3))
             {
                 GeChoiceStu("uspGenStudent");
             }
@@ -174,6 +174,7 @@ namespace University
         void SortLec(string procedureName)
         {
             //need to fix error for variable, mixing string and money
+            //sort salary lecturer not working
 
             //string sal = cboSortSalLec.SelectedItem.ToString();
             //da = new SqlDataAdapter();
