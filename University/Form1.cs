@@ -13,6 +13,7 @@ namespace University
 {
     public partial class Form1 : Form
     {
+        HashCode hc = new HashCode();
         public Form1()
         {
             InitializeComponent();
