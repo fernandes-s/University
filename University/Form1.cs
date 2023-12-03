@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace University
 {
@@ -17,16 +18,57 @@ namespace University
             InitializeComponent();
         }
 
-        private void btnAddNew_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            AddNew add = new AddNew();
-            add.ShowDialog();
+
         }
 
-        private void btnShow_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            ShowData sd = new ShowData();
-            sd.ShowDialog();
+            string username = "admin";
+            string password = "123";
+
+            string user = txtUserName.Text;
+            string pass = txtPass.Text;
+
+            if (user == username && pass == password)
+            {
+                MessageBox.Show("Logged in");
+                AddNew an = new AddNew();
+                an.Show();
+                this.Hide();
+
+                ////used txtHash to find the encripitado password, adicionar uma txtBox, and name it after the same name here as well
+                ////txtHash.Text = hc.passhash(pass);
+                //lblPass.Enabled = false;
+                //lblUser.Enabled = false;
+                //txtPass.Enabled = false;
+                //txtUser.Enabled = false;
+                //btnSubmit.Enabled = false;
+                //txtUser.Clear();
+                //txtPass.Clear();
+            }
+            else
+            {
+                MessageBox.Show("The User name or password you entered is incorrect, try again");
+                txtPass.Clear();
+                txtUserName.Clear();
+                txtUserName.Focus();
+            }
+
+            
+        }
+
+        private void lblClear_Click(object sender, EventArgs e)
+        {
+            txtUserName.Clear();
+            txtPass.Clear();
+            txtUserName.Focus();
+        }
+
+        private void lbbExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -81,6 +81,7 @@
     <Compile Include="AddLecturer.Designer.cs">
       <DependentUpon>AddLecturer.cs</DependentUpon>
     </Compile>
+    <Compile Include="HashCode.cs" />
     <Compile Include="Lecturer.cs" />
     <Compile Include="MyTables.cs" />
     <Compile Include="Person.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
@@ -123,6 +125,7 @@
     <EmbeddedResource Include="ShowData.resx">
       <DependentUpon>ShowData.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -144,6 +147,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\avatar-flat-icon-on-black-background-style-vector-25959438.jpg" />
+    <None Include="Resources\pngtree-vector-lock-icon-png-image_1028350.jpg" />
+    <None Include="Resources\Captura de tela 2023-12-03 163819.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

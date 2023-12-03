@@ -21,14 +21,21 @@ namespace University
         {
             AddLecturer l = new AddLecturer();
             l.ShowDialog();
-            this.Hide();
+            //this.Hide();
         }
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
             AddStudent s = new AddStudent();
             s.ShowDialog();
+            //this.Hide();
         }
 
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            ShowData sd = new ShowData();
+            sd.ShowDialog();
+            //this.Hide();
+        }
     }
 }

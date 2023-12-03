@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gboLecturer = new System.Windows.Forms.GroupBox();
+            this.txtFn = new System.Windows.Forms.TextBox();
             this.rdoFluid = new System.Windows.Forms.RadioButton();
             this.lblAgeShow = new System.Windows.Forms.Label();
             this.txtSal = new System.Windows.Forms.TextBox();
@@ -58,13 +59,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.epError = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtFn = new System.Windows.Forms.TextBox();
             this.gboLecturer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epError)).BeginInit();
             this.SuspendLayout();
             // 
             // gboLecturer
             // 
+            this.gboLecturer.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.gboLecturer.Controls.Add(this.txtFn);
             this.gboLecturer.Controls.Add(this.rdoFluid);
             this.gboLecturer.Controls.Add(this.lblAgeShow);
@@ -101,6 +102,13 @@
             this.gboLecturer.TabIndex = 0;
             this.gboLecturer.TabStop = false;
             this.gboLecturer.Text = "Lecturer";
+            // 
+            // txtFn
+            // 
+            this.txtFn.Location = new System.Drawing.Point(163, 36);
+            this.txtFn.Name = "txtFn";
+            this.txtFn.Size = new System.Drawing.Size(399, 36);
+            this.txtFn.TabIndex = 1;
             // 
             // rdoFluid
             // 
@@ -359,21 +367,15 @@
             // 
             this.epError.ContainerControl = this;
             // 
-            // txtFn
-            // 
-            this.txtFn.Location = new System.Drawing.Point(163, 36);
-            this.txtFn.Name = "txtFn";
-            this.txtFn.Size = new System.Drawing.Size(399, 36);
-            this.txtFn.TabIndex = 1;
-            // 
             // AddLecturer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 718);
+            this.ClientSize = new System.Drawing.Size(711, 659);
             this.Controls.Add(this.gboLecturer);
             this.Name = "AddLecturer";
             this.Text = "Lecturer";
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Load += new System.EventHandler(this.Lecturer_Load);
             this.gboLecturer.ResumeLayout(false);
             this.gboLecturer.PerformLayout();

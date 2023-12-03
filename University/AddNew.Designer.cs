@@ -30,6 +30,7 @@
         {
             this.btnStudent = new System.Windows.Forms.Button();
             this.btnLecturer = new System.Windows.Forms.Button();
+            this.btnShow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStudent
@@ -62,11 +63,27 @@
             this.btnLecturer.UseVisualStyleBackColor = true;
             this.btnLecturer.Click += new System.EventHandler(this.btnLecturer_Click);
             // 
+            // btnShow
+            // 
+            this.btnShow.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnShow.FlatAppearance.BorderSize = 3;
+            this.btnShow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShow.Font = new System.Drawing.Font("Arial", 16F);
+            this.btnShow.Location = new System.Drawing.Point(34, 243);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(280, 54);
+            this.btnShow.TabIndex = 7;
+            this.btnShow.Text = "Show Data";
+            this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
             // AddNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 259);
+            this.ClientSize = new System.Drawing.Size(526, 448);
+            this.Controls.Add(this.btnShow);
             this.Controls.Add(this.btnStudent);
             this.Controls.Add(this.btnLecturer);
             this.Name = "AddNew";
@@ -79,5 +96,6 @@
 
         private System.Windows.Forms.Button btnStudent;
         private System.Windows.Forms.Button btnLecturer;
+        private System.Windows.Forms.Button btnShow;
     }
 }

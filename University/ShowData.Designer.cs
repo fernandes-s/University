@@ -160,7 +160,7 @@
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Arial", 16F);
-            this.btnClose.Location = new System.Drawing.Point(1327, 323);
+            this.btnClose.Location = new System.Drawing.Point(1327, 324);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(114, 47);
             this.btnClose.TabIndex = 45;
