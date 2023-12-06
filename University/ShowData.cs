@@ -31,7 +31,7 @@ namespace University
             cboShowCy.DataSource = Enum.GetValues(typeof(Counties));
             cboShowCyStu.DataSource = Enum.GetValues(typeof(Counties));
             cboSortAgeStu.DataSource = Enum.GetValues(typeof(Sort));
-            cboSortSalLec.DataSource = Enum.GetValues(typeof(Sort));
+            cboSortNameLec.DataSource = Enum.GetValues(typeof(Sort));
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -139,13 +139,13 @@ namespace University
 
         private void cboSortSalLec_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboSortSalLec.SelectedIndex.Equals(1))
+            if (cboSortNameLec.SelectedIndex.Equals(1))
             {
-                SortLec("uspSortLecturerSalAsc");
+                SortLec("uspSortLecturerNameAsc");
             }
-            else if (cboSortSalLec.SelectedIndex.Equals(2))
+            else if (cboSortNameLec.SelectedIndex.Equals(2))
             {
-                SortLec("uspSortLecturerSalDesc");
+                SortLec("uspSortLecturerNameDesc");
             }
         }
 
@@ -176,7 +176,7 @@ namespace University
             //need to fix error for variable, mixing string and money
             //sort salary lecturer not working
 
-            string pay = cboSortSalLec.SelectedItem.ToString();
+            string name = cboSortNameLec.SelectedItem.ToString();
             da = new SqlDataAdapter();
             dt = new DataTable();
 
@@ -184,11 +184,11 @@ namespace University
             SqlCommand cmd = dao.OpenCon().CreateCommand();
             cmd.CommandText = procedureName;
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("pay", pay);
+            cmd.Parameters.AddWithValue("fn", name);
 
             da.SelectCommand = cmd;
             da.Fill(dt);
-            dgvStudent.DataSource = dt;
+            dgvLecturer.DataSource = dt;
             dao.CloseCon();
         }
 

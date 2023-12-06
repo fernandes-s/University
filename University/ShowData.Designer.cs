@@ -52,7 +52,7 @@
             this.lblSortAgeStu = new System.Windows.Forms.Label();
             this.cboSortAgeStu = new System.Windows.Forms.ComboBox();
             this.lblSortSalLec = new System.Windows.Forms.Label();
-            this.cboSortSalLec = new System.Windows.Forms.ComboBox();
+            this.cboSortNameLec = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLecturer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.SuspendLayout();
@@ -312,19 +312,19 @@
             this.lblSortSalLec.AutoSize = true;
             this.lblSortSalLec.Location = new System.Drawing.Point(1002, 0);
             this.lblSortSalLec.Name = "lblSortSalLec";
-            this.lblSortSalLec.Size = new System.Drawing.Size(73, 16);
+            this.lblSortSalLec.Size = new System.Drawing.Size(71, 16);
             this.lblSortSalLec.TabIndex = 62;
-            this.lblSortSalLec.Text = "Sort Salary";
+            this.lblSortSalLec.Text = "Sort Name";
             // 
-            // cboSortSalLec
+            // cboSortNameLec
             // 
-            this.cboSortSalLec.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboSortSalLec.FormattingEnabled = true;
-            this.cboSortSalLec.Location = new System.Drawing.Point(1005, 24);
-            this.cboSortSalLec.Name = "cboSortSalLec";
-            this.cboSortSalLec.Size = new System.Drawing.Size(181, 39);
-            this.cboSortSalLec.TabIndex = 61;
-            this.cboSortSalLec.SelectedIndexChanged += new System.EventHandler(this.cboSortSalLec_SelectedIndexChanged);
+            this.cboSortNameLec.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSortNameLec.FormattingEnabled = true;
+            this.cboSortNameLec.Location = new System.Drawing.Point(1005, 24);
+            this.cboSortNameLec.Name = "cboSortNameLec";
+            this.cboSortNameLec.Size = new System.Drawing.Size(181, 39);
+            this.cboSortNameLec.TabIndex = 61;
+            this.cboSortNameLec.SelectedIndexChanged += new System.EventHandler(this.cboSortSalLec_SelectedIndexChanged);
             // 
             // ShowData
             // 
@@ -332,7 +332,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1536, 646);
             this.Controls.Add(this.lblSortSalLec);
-            this.Controls.Add(this.cboSortSalLec);
+            this.Controls.Add(this.cboSortNameLec);
             this.Controls.Add(this.lblSortAgeStu);
             this.Controls.Add(this.cboSortAgeStu);
             this.Controls.Add(this.label2);
@@ -392,6 +392,6 @@
         private System.Windows.Forms.Label lblSortAgeStu;
         private System.Windows.Forms.ComboBox cboSortAgeStu;
         private System.Windows.Forms.Label lblSortSalLec;
-        private System.Windows.Forms.ComboBox cboSortSalLec;
+        private System.Windows.Forms.ComboBox cboSortNameLec;
     }
 }
