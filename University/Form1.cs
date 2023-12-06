@@ -44,7 +44,7 @@ namespace University
                 //lblPass.Enabled = false;
                 //lblUser.Enabled = false;
                 //txtPass.Enabled = false;
-                //txtUser.Enabled = false;
+                //txtUser.Enabled = false;,
                 //btnSubmit.Enabled = false;
                 //txtUser.Clear();
                 //txtPass.Clear();

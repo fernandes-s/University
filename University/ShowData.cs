@@ -13,7 +13,6 @@ namespace University
 {
     public partial class ShowData : Form
     {
-        
         DAO dao = new DAO();
         SqlDataAdapter da;
         DataTable dt;
