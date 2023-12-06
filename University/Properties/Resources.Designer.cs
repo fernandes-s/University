@@ -63,16 +63,6 @@ namespace University.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1000_F_218230230_OdCO2XyeMsH3ica7Um99uIeMnTFGyibC {
-            get {
-                object obj = ResourceManager.GetObject("1000_F_218230230_OdCO2XyeMsH3ica7Um99uIeMnTFGyibC", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap avatar_flat_icon_on_black_background_style_vector_25959438 {
             get {
                 object obj = ResourceManager.GetObject("avatar-flat-icon-on-black-background-style-vector-25959438", resourceCulture);
@@ -86,16 +76,6 @@ namespace University.Properties {
         internal static System.Drawing.Bitmap Captura_de_tela_2023_12_03_163819 {
             get {
                 object obj = ResourceManager.GetObject("Captura de tela 2023-12-03 163819", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap download {
-            get {
-                object obj = ResourceManager.GetObject("download", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

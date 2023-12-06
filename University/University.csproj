@@ -48,7 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -83,10 +85,16 @@
     </Compile>
     <Compile Include="HashCode.cs" />
     <Compile Include="Lecturer.cs" />
+    <Compile Include="MyMethods.cs" />
     <Compile Include="MyTables.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ShowData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,18 +117,12 @@
     <EmbeddedResource Include="AddLecturer.resx">
       <DependentUpon>AddLecturer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="AddStudent.resx">
-      <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShowData.resx">
       <DependentUpon>ShowData.cs</DependentUpon>
@@ -147,6 +149,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\pngtree-vector-lock-icon-png-image_10283501.jpg" />
+    <None Include="Resources\avatar-flat-icon-on-black-background-style-vector-259594381.jpg" />
+    <None Include="Resources\Captura de tela 2023-12-03 1638191.png" />
     <None Include="Resources\avatar-flat-icon-on-black-background-style-vector-25959438.jpg" />
     <None Include="Resources\pngtree-vector-lock-icon-png-image_1028350.jpg" />
     <None Include="Resources\Captura de tela 2023-12-03 163819.png" />

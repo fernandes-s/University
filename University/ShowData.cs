@@ -13,7 +13,7 @@ namespace University
 {
     public partial class ShowData : Form
     {
-
+        
         DAO dao = new DAO();
         SqlDataAdapter da;
         DataTable dt;
@@ -176,20 +176,20 @@ namespace University
             //need to fix error for variable, mixing string and money
             //sort salary lecturer not working
 
-            //string sal = cboSortSalLec.SelectedItem.ToString();
-            //da = new SqlDataAdapter();
-            //dt = new DataTable();
+            string pay = cboSortSalLec.SelectedItem.ToString();
+            da = new SqlDataAdapter();
+            dt = new DataTable();
 
 
-            //SqlCommand cmd = dao.OpenCon().CreateCommand();
-            //cmd.CommandText = procedureName;
-            //cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Parameters.AddWithValue("pay", sal);
+            SqlCommand cmd = dao.OpenCon().CreateCommand();
+            cmd.CommandText = procedureName;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("pay", pay);
 
-            //da.SelectCommand = cmd;
-            //da.Fill(dt);
-            //dgvStudent.DataSource = dt;
-            //dao.CloseCon();
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            dgvStudent.DataSource = dt;
+            dao.CloseCon();
         }
 
 

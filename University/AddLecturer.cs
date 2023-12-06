@@ -47,7 +47,7 @@ namespace University
             string ph = txtPhone.Text;
             string ema = txtEmail.Text;
             string dept = cboDpt.SelectedItem.ToString();
-            float pay = float.Parse(txtSal.Text);
+            decimal pay = decimal.Parse(txtPay.Text);
 
             Lecturer l = new Lecturer(fn, sn,eirC, cy, age, ge, ph, ema, dept, pay);
 
@@ -63,7 +63,7 @@ namespace University
             txtEirCode.Clear();
             txtPhone.Clear();
             txtEmail.Clear();
-            txtSal.Clear();
+            txtPay.Clear();
 
 
 
@@ -116,5 +116,21 @@ namespace University
             lblAgeShow.Show();
         }
 
+        private void txtEirCode_Validated(object sender, EventArgs e)
+        {
+            epError.Clear();
+        }
+
+        private void txtEirCode_Validating(object sender, CancelEventArgs e)
+        {
+            e.Cancel = false;
+            
+            if (txtEirCode.Text == string.Empty)
+            {
+                epError.SetError(txtEirCode, "Enter your eirCode");
+                e.Cancel = true;
+
+            }
+        }
     }
 }

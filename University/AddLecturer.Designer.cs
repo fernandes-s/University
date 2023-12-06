@@ -33,8 +33,8 @@
             this.txtFn = new System.Windows.Forms.TextBox();
             this.rdoFluid = new System.Windows.Forms.RadioButton();
             this.lblAgeShow = new System.Windows.Forms.Label();
-            this.txtSal = new System.Windows.Forms.TextBox();
-            this.lblSal = new System.Windows.Forms.Label();
+            this.txtPay = new System.Windows.Forms.TextBox();
+            this.lblPay = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.rdoFemale = new System.Windows.Forms.RadioButton();
             this.rdoMale = new System.Windows.Forms.RadioButton();
@@ -69,8 +69,8 @@
             this.gboLecturer.Controls.Add(this.txtFn);
             this.gboLecturer.Controls.Add(this.rdoFluid);
             this.gboLecturer.Controls.Add(this.lblAgeShow);
-            this.gboLecturer.Controls.Add(this.txtSal);
-            this.gboLecturer.Controls.Add(this.lblSal);
+            this.gboLecturer.Controls.Add(this.txtPay);
+            this.gboLecturer.Controls.Add(this.lblPay);
             this.gboLecturer.Controls.Add(this.lblGender);
             this.gboLecturer.Controls.Add(this.rdoFemale);
             this.gboLecturer.Controls.Add(this.rdoMale);
@@ -129,21 +129,21 @@
             this.lblAgeShow.Size = new System.Drawing.Size(0, 29);
             this.lblAgeShow.TabIndex = 32;
             // 
-            // txtSal
+            // txtPay
             // 
-            this.txtSal.Location = new System.Drawing.Point(163, 465);
-            this.txtSal.Name = "txtSal";
-            this.txtSal.Size = new System.Drawing.Size(399, 36);
-            this.txtSal.TabIndex = 12;
+            this.txtPay.Location = new System.Drawing.Point(163, 465);
+            this.txtPay.Name = "txtPay";
+            this.txtPay.Size = new System.Drawing.Size(399, 36);
+            this.txtPay.TabIndex = 12;
             // 
-            // lblSal
+            // lblPay
             // 
-            this.lblSal.AutoSize = true;
-            this.lblSal.Location = new System.Drawing.Point(6, 472);
-            this.lblSal.Name = "lblSal";
-            this.lblSal.Size = new System.Drawing.Size(85, 29);
-            this.lblSal.TabIndex = 30;
-            this.lblSal.Text = "Salary";
+            this.lblPay.AutoSize = true;
+            this.lblPay.Location = new System.Drawing.Point(6, 472);
+            this.lblPay.Name = "lblPay";
+            this.lblPay.Size = new System.Drawing.Size(85, 29);
+            this.lblPay.TabIndex = 30;
+            this.lblPay.Text = "Salary";
             // 
             // lblGender
             // 
@@ -299,6 +299,8 @@
             this.txtEirCode.Name = "txtEirCode";
             this.txtEirCode.Size = new System.Drawing.Size(399, 36);
             this.txtEirCode.TabIndex = 3;
+            this.txtEirCode.Validating += new System.ComponentModel.CancelEventHandler(this.txtEirCode_Validating);
+            this.txtEirCode.Validated += new System.EventHandler(this.txtEirCode_Validated);
             // 
             // lblEmail
             // 
@@ -410,8 +412,8 @@
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.RadioButton rdoFemale;
         private System.Windows.Forms.RadioButton rdoMale;
-        private System.Windows.Forms.TextBox txtSal;
-        private System.Windows.Forms.Label lblSal;
+        private System.Windows.Forms.TextBox txtPay;
+        private System.Windows.Forms.Label lblPay;
         private System.Windows.Forms.Label lblAgeShow;
         private System.Windows.Forms.RadioButton rdoFluid;
         private System.Windows.Forms.ErrorProvider epError;

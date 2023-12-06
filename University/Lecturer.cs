@@ -13,18 +13,18 @@ namespace University
     {
         DAO d = new DAO();
         public string Module { get; set; }
-        public double Salary { get; set; }
+        public decimal Pay { get; set; }
 
-        public Lecturer(string fn, string sn, string eirC, string cy, string age, string ge, string ph, string ema, string mod, double sal)
+        public Lecturer(string fn, string sn, string eirC, string cy, string age, string ge, string ph, string ema, string mod, decimal pay)
             : base(fn, sn, eirC, cy, age, ge, ph, ema)
         {
             Module = mod;
-            Salary = sal;
+            Pay = pay;
             
         }
 
 
-        public void AddNewLecturer(string fn, string sn, string eirC, string cy, string age, string ge, string ph, string ema, string dept, float pay)
+        public void AddNewLecturer(string fn, string sn, string eirC, string cy, string age, string ge, string ph, string ema, string dept, decimal pay)
         {
             SqlCommand cmd = d.OpenCon().CreateCommand();
             cmd.CommandText = "uspAddLecturer";
