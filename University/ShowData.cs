@@ -172,9 +172,6 @@ namespace University
 
         void SortLec(string procedureName)
         {
-            //need to fix error for variable, mixing string and money
-            //sort salary lecturer not working
-
             string name = cboSortNameLec.SelectedItem.ToString();
             da = new SqlDataAdapter();
             dt = new DataTable();

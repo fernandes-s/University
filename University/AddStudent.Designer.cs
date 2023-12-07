@@ -62,7 +62,7 @@
             // 
             // gboStudent
             // 
-            this.gboStudent.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.gboStudent.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gboStudent.Controls.Add(this.rdoFluid);
             this.gboStudent.Controls.Add(this.cboModule);
             this.gboStudent.Controls.Add(this.btnAdd);
@@ -92,7 +92,7 @@
             this.gboStudent.Controls.Add(this.lblSn);
             this.gboStudent.Controls.Add(this.lblFn);
             this.gboStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gboStudent.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.gboStudent.ForeColor = System.Drawing.SystemColors.Control;
             this.gboStudent.Location = new System.Drawing.Point(12, 12);
             this.gboStudent.Name = "gboStudent";
             this.gboStudent.Size = new System.Drawing.Size(618, 635);
@@ -139,7 +139,7 @@
             this.lblAgeShow.AutoSize = true;
             this.lblAgeShow.Location = new System.Drawing.Point(504, 224);
             this.lblAgeShow.Name = "lblAgeShow";
-            this.lblAgeShow.Size = new System.Drawing.Size(0, 36);
+            this.lblAgeShow.Size = new System.Drawing.Size(0, 29);
             this.lblAgeShow.TabIndex = 32;
             // 
             // lblModule
@@ -147,7 +147,7 @@
             this.lblModule.AutoSize = true;
             this.lblModule.Location = new System.Drawing.Point(6, 472);
             this.lblModule.Name = "lblModule";
-            this.lblModule.Size = new System.Drawing.Size(136, 36);
+            this.lblModule.Size = new System.Drawing.Size(109, 29);
             this.lblModule.TabIndex = 30;
             this.lblModule.Text = "Modules";
             // 
@@ -156,7 +156,7 @@
             this.lblGe.AutoSize = true;
             this.lblGe.Location = new System.Drawing.Point(6, 266);
             this.lblGe.Name = "lblGe";
-            this.lblGe.Size = new System.Drawing.Size(120, 36);
+            this.lblGe.Size = new System.Drawing.Size(96, 29);
             this.lblGe.TabIndex = 28;
             this.lblGe.Text = "Gender";
             // 
@@ -251,7 +251,7 @@
             this.lblCourse.AutoSize = true;
             this.lblCourse.Location = new System.Drawing.Point(6, 429);
             this.lblCourse.Name = "lblCourse";
-            this.lblCourse.Size = new System.Drawing.Size(118, 36);
+            this.lblCourse.Size = new System.Drawing.Size(94, 29);
             this.lblCourse.TabIndex = 18;
             this.lblCourse.Text = "Course";
             // 
@@ -297,7 +297,7 @@
             this.lblEma.AutoSize = true;
             this.lblEma.Location = new System.Drawing.Point(6, 373);
             this.lblEma.Name = "lblEma";
-            this.lblEma.Size = new System.Drawing.Size(98, 36);
+            this.lblEma.Size = new System.Drawing.Size(78, 29);
             this.lblEma.TabIndex = 8;
             this.lblEma.Text = "Email";
             // 
@@ -306,7 +306,7 @@
             this.lblPh.AutoSize = true;
             this.lblPh.Location = new System.Drawing.Point(6, 311);
             this.lblPh.Name = "lblPh";
-            this.lblPh.Size = new System.Drawing.Size(108, 36);
+            this.lblPh.Size = new System.Drawing.Size(86, 29);
             this.lblPh.TabIndex = 7;
             this.lblPh.Text = "Phone";
             // 
@@ -315,7 +315,7 @@
             this.lblAge.AutoSize = true;
             this.lblAge.Location = new System.Drawing.Point(6, 221);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(73, 36);
+            this.lblAge.Size = new System.Drawing.Size(58, 29);
             this.lblAge.TabIndex = 6;
             this.lblAge.Text = "Age";
             // 
@@ -324,7 +324,7 @@
             this.lblCy.AutoSize = true;
             this.lblCy.Location = new System.Drawing.Point(6, 178);
             this.lblCy.Name = "lblCy";
-            this.lblCy.Size = new System.Drawing.Size(116, 36);
+            this.lblCy.Size = new System.Drawing.Size(93, 29);
             this.lblCy.TabIndex = 5;
             this.lblCy.Text = "County";
             // 
@@ -333,7 +333,7 @@
             this.lblEirCode.AutoSize = true;
             this.lblEirCode.Location = new System.Drawing.Point(6, 114);
             this.lblEirCode.Name = "lblEirCode";
-            this.lblEirCode.Size = new System.Drawing.Size(139, 36);
+            this.lblEirCode.Size = new System.Drawing.Size(111, 29);
             this.lblEirCode.TabIndex = 4;
             this.lblEirCode.Text = "Eir Code";
             // 
@@ -349,7 +349,7 @@
             this.lblSn.AutoSize = true;
             this.lblSn.Location = new System.Drawing.Point(6, 71);
             this.lblSn.Name = "lblSn";
-            this.lblSn.Size = new System.Drawing.Size(145, 36);
+            this.lblSn.Size = new System.Drawing.Size(116, 29);
             this.lblSn.TabIndex = 1;
             this.lblSn.Text = "Surname";
             // 
@@ -358,7 +358,7 @@
             this.lblFn.AutoSize = true;
             this.lblFn.Location = new System.Drawing.Point(6, 39);
             this.lblFn.Name = "lblFn";
-            this.lblFn.Size = new System.Drawing.Size(101, 36);
+            this.lblFn.Size = new System.Drawing.Size(81, 29);
             this.lblFn.TabIndex = 0;
             this.lblFn.Text = "Name";
             // 

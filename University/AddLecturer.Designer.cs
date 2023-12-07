@@ -65,7 +65,7 @@
             // 
             // gboLecturer
             // 
-            this.gboLecturer.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.gboLecturer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gboLecturer.Controls.Add(this.txtFn);
             this.gboLecturer.Controls.Add(this.rdoFluid);
             this.gboLecturer.Controls.Add(this.lblAgeShow);
@@ -95,7 +95,7 @@
             this.gboLecturer.Controls.Add(this.label2);
             this.gboLecturer.Controls.Add(this.lblName);
             this.gboLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gboLecturer.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.gboLecturer.ForeColor = System.Drawing.SystemColors.Control;
             this.gboLecturer.Location = new System.Drawing.Point(13, 13);
             this.gboLecturer.Name = "gboLecturer";
             this.gboLecturer.Size = new System.Drawing.Size(686, 635);
@@ -230,6 +230,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(399, 36);
             this.txtEmail.TabIndex = 10;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
+            this.txtEmail.Validated += new System.EventHandler(this.txtEmail_Validated);
             // 
             // cboDpt
             // 
@@ -284,6 +286,8 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(399, 36);
             this.txtPhone.TabIndex = 9;
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
+            this.txtPhone.Validated += new System.EventHandler(this.txtPhone_Validated);
             // 
             // cboCounty
             // 

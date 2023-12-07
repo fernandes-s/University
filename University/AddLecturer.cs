@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
+using System.Xml.Linq;
 
 
 namespace University
@@ -64,44 +65,6 @@ namespace University
             txtPhone.Clear();
             txtEmail.Clear();
             txtPay.Clear();
-
-
-
-
-            string regEirCode = @"^[A-Za-z]\d{1,2}[A-Za-z0-9]{4}$";
-
-            string regPhone = @"^\d{3}-\d{7}$";
-
-            string regEmail = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
-            //regEx phone checker
-            if (Regex.IsMatch(ph, regPhone))
-            {
-                //MessageBox.Show("Phone number is valid! :)");
-            }
-            else
-            {
-                MessageBox.Show("Incorrect phone number, try again.");
-            }
-
-            //regEx eirCode checker
-            if (Regex.IsMatch(eirC, regEirCode)) 
-            {
-
-            }
-            else
-            {
-                MessageBox.Show("Incorrect eir code, try again.");
-            }
-
-            //regEx email checker
-            if (Regex.IsMatch(ema, regEmail))
-            {
-
-            }
-            else
-            {
-                MessageBox.Show("Incorrect email, try again.");
-            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -116,21 +79,66 @@ namespace University
             lblAgeShow.Show();
         }
 
+        //Validating
+        //EirCode
+        private void txtEirCode_Validating(object sender, CancelEventArgs e)
+        {
+            string regEirCode = @"^[A-Za-z]\d{1,2}[A-Za-z0-9]{4}$";
+            bool isValidEirCode = Regex.IsMatch(txtEirCode.Text, regEirCode);
+
+            if (!isValidEirCode)
+            {
+                epError.SetError(txtEirCode, "Incorrect eir code, try again. You must follow the pattern E.G: D01F123");
+                e.Cancel = true;
+            }
+        }
+
+        //Phone
+        private void txtPhone_Validating(object sender, CancelEventArgs e)
+        {
+            string regPhone = @"^\d{3}-\d{7}$";
+            bool isValidPhone = Regex.IsMatch(txtPhone.Text, regPhone);
+
+            if (!isValidPhone)
+            {
+                epError.SetError(txtPhone, "Incorrect phone number, try again. You must follow the pattern E.G: 012-1234567");
+                e.Cancel = true;
+            }
+        }
+
+        //Email
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            string regEmail = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
+            bool isValidEmail = Regex.IsMatch(txtEmail.Text, regEmail);
+
+            if (!isValidEmail)
+            {
+                epError.SetError(txtPhone, "Incorrect email, try again. You must follow the pattern E.G: abc@abc.abc");
+                e.Cancel = true;
+            }
+        }
+
+
+        //Validated
+        //EirCode
         private void txtEirCode_Validated(object sender, EventArgs e)
         {
             epError.Clear();
         }
 
-        private void txtEirCode_Validating(object sender, CancelEventArgs e)
+        //Phone
+        private void txtPhone_Validated(object sender, EventArgs e)
         {
-            e.Cancel = false;
-            
-            if (txtEirCode.Text == string.Empty)
-            {
-                epError.SetError(txtEirCode, "Enter your eirCode");
-                e.Cancel = true;
-
-            }
+            epError.Clear();
         }
+
+        //Email
+        private void txtEmail_Validated(object sender, EventArgs e)
+        {
+            epError.Clear();
+        }
+
+
     }
 }

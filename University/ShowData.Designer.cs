@@ -69,6 +69,7 @@
             // 
             // btnShowStu
             // 
+            this.btnShowStu.BackColor = System.Drawing.SystemColors.Control;
             this.btnShowStu.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnShowStu.FlatAppearance.BorderSize = 3;
             this.btnShowStu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -79,11 +80,12 @@
             this.btnShowStu.Size = new System.Drawing.Size(171, 46);
             this.btnShowStu.TabIndex = 35;
             this.btnShowStu.Text = "Students";
-            this.btnShowStu.UseVisualStyleBackColor = true;
+            this.btnShowStu.UseVisualStyleBackColor = false;
             this.btnShowStu.Click += new System.EventHandler(this.btnShowStu_Click);
             // 
             // btnShowLecturers
             // 
+            this.btnShowLecturers.BackColor = System.Drawing.SystemColors.Control;
             this.btnShowLecturers.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnShowLecturers.FlatAppearance.BorderSize = 3;
             this.btnShowLecturers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -94,7 +96,7 @@
             this.btnShowLecturers.Size = new System.Drawing.Size(171, 46);
             this.btnShowLecturers.TabIndex = 36;
             this.btnShowLecturers.Text = "Lecturers";
-            this.btnShowLecturers.UseVisualStyleBackColor = true;
+            this.btnShowLecturers.UseVisualStyleBackColor = false;
             this.btnShowLecturers.Click += new System.EventHandler(this.btnShowLecturers_Click);
             // 
             // cboShowGenderLec
@@ -330,6 +332,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1536, 646);
             this.Controls.Add(this.lblSortSalLec);
             this.Controls.Add(this.cboSortNameLec);
