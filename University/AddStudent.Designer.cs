@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gboStudent = new System.Windows.Forms.GroupBox();
             this.rdoFluid = new System.Windows.Forms.RadioButton();
             this.cboModule = new System.Windows.Forms.ComboBox();
@@ -57,7 +58,9 @@
             this.txtFn = new System.Windows.Forms.TextBox();
             this.lblSn = new System.Windows.Forms.Label();
             this.lblFn = new System.Windows.Forms.Label();
+            this.epError = new System.Windows.Forms.ErrorProvider(this.components);
             this.gboStudent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).BeginInit();
             this.SuspendLayout();
             // 
             // gboStudent
@@ -236,6 +239,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(399, 36);
             this.txtEmail.TabIndex = 9;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
+            this.txtEmail.Validated += new System.EventHandler(this.txtEmail_Validated);
             // 
             // cboCourse
             // 
@@ -276,6 +281,8 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(399, 36);
             this.txtPhone.TabIndex = 8;
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
+            this.txtPhone.Validated += new System.EventHandler(this.txtPhone_Validated);
             // 
             // cboCounty
             // 
@@ -291,6 +298,8 @@
             this.txtEirCode.Name = "txtEirCode";
             this.txtEirCode.Size = new System.Drawing.Size(399, 36);
             this.txtEirCode.TabIndex = 3;
+            this.txtEirCode.Validating += new System.ComponentModel.CancelEventHandler(this.txtEirCode_Validating);
+            this.txtEirCode.Validated += new System.EventHandler(this.txtEirCode_Validated);
             // 
             // lblEma
             // 
@@ -362,6 +371,10 @@
             this.lblFn.TabIndex = 0;
             this.lblFn.Text = "Name";
             // 
+            // epError
+            // 
+            this.epError.ContainerControl = this;
+            // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -373,6 +386,7 @@
             this.Load += new System.EventHandler(this.Student_Load);
             this.gboStudent.ResumeLayout(false);
             this.gboStudent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -408,5 +422,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cboModule;
         private System.Windows.Forms.RadioButton rdoFluid;
+        private System.Windows.Forms.ErrorProvider epError;
     }
 }

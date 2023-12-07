@@ -114,7 +114,7 @@ namespace University
 
             if (!isValidEmail)
             {
-                epError.SetError(txtPhone, "Incorrect email, try again. You must follow the pattern E.G: abc@abc.abc");
+                epError.SetError(txtEmail, "Incorrect email, try again. You must follow the pattern E.G: abc@abc.abc");
                 e.Cancel = true;
             }
         }

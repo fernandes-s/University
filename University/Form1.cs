@@ -34,7 +34,12 @@ namespace University
 
             if (user == username && pass == password)
             {
-                MessageBox.Show("Logged in");
+                MessageBox.Show("Have a good day", "Welcome Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ////message box has four parameters
+                ////1 message
+                ////2 title
+                ////3 button
+                //4 icon
                 AddNew an = new AddNew();
                 an.Show();
                 this.Hide();
@@ -51,7 +56,7 @@ namespace University
             }
             else
             {
-                MessageBox.Show("The User name or password you entered is incorrect, try again");
+                MessageBox.Show("The User name or password you entered is incorrect, try again", "Incorrect Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtPass.Clear();
                 txtUserName.Clear();
                 txtUserName.Focus();
